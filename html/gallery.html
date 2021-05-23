@@ -32,10 +32,12 @@
     <main>
         <button id="like1"   > LIKE</button>
         <div id="categories">
-            <span>PAINTINGS</span><span>DECORE</span><span>POSTER</span>
+            <span onclick="showCollection(0)" class="categoryBtn">PAINTINGS</span>
+            <span onclick="showCollection(1)" class="categoryBtn">DECORE</span>
+            <span onclick="showCollection(2)" class="categoryBtn">POSTER</span>
         </div>
         <!-- ........................................................Paintings -->
-        <div id="paintings">
+        <div id="paintings" class="myCollections">
             <div class="sectionSelectionBtn">
                 <button class="sectionBtn">Sort By<i class="fas fa-arrow-down"></i></button>
                 <div class="dropContent">
@@ -44,13 +46,19 @@
                     <p>section3</p>
                 </div>
             </div>
+            <div id="paintingsDiv"></div>
+            <!-- <div class="inlineImages">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfGzCqAwCj3iNCl4Argnl5n7kVLXmOr1M7hg&usqp=CAU" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
+            </div>
             <div class="inlineImages">
                 <img src="https://via.placeholder.com/150" alt="placeholder">
                 <button >Like <i class="fas fa-thumbs-up"></i></button>
                 <button><i class="fas fa-cart-plus"></i></button>
             </div>
             <div class="inlineImages">
-                <img src="https://via.placeholder.com/150" alt="placeholder">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHbICtUBzT3oXKxBUOLDu6joRHhPWotMxsow&usqp=CAU" alt="placeholder">
                 <button>Like <i class="fas fa-thumbs-up"></i></button>
                 <button><i class="fas fa-cart-plus"></i></button>
             </div>
@@ -59,9 +67,20 @@
                 <button>Like <i class="fas fa-thumbs-up"></i></button>
                 <button><i class="fas fa-cart-plus"></i></button>
             </div>
+            <div class="inlineImages">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9im-nzBnxzrHfYXv98HFY92fkEuy3mRwynw&usqp=CAU" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
+            </div>
+            <div class="inlineImages">
+                <img src="https://via.placeholder.com/150" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
+            </div> -->
         </div>
+
         <!-- ........................................................Decore -->
-        <div id="decore">
+        <div id="decore" class="myCollections">
             <div class="sectionSelectionBtn">
                 <button class="sectionBtn">Sort By<i class="fas fa-arrow-down"></i></button>
                 <div class="dropContent">
@@ -73,6 +92,21 @@
             <div class="inlineImages">
                 <img src="https://via.placeholder.com/150" alt="placeholder">
                 <button >Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
+            </div>
+            <div class="inlineImages">
+                <img src="https://via.placeholder.com/150" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
+            </div>
+            <div class="inlineImages">
+                <img src="https://via.placeholder.com/150" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
+            </div>
+            <div class="inlineImages">
+                <img src="https://via.placeholder.com/150" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
                 <button><i class="fas fa-cart-plus"></i></button>
             </div>
             <div class="inlineImages">
@@ -87,7 +121,7 @@
             </div>
         </div>
         <!-- .........................................................Posters -->
-        <div id="posters">
+        <div id="posters" class="myCollections">
             <div class="sectionSelectionBtn">
                 <button class="sectionBtn">Sort By<i class="fas fa-arrow-down"></i></button>
                 <div class="dropContent">
@@ -95,6 +129,21 @@
                     <p>section2</p>
                     <p>section3</p>
                 </div>
+            </div>
+            <div class="inlineImages">
+                <img src="https://via.placeholder.com/150" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
+            </div>
+            <div class="inlineImages">
+                <img src="https://via.placeholder.com/150" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
+            </div>
+            <div class="inlineImages">
+                <img src="https://via.placeholder.com/150" alt="placeholder">
+                <button>Like <i class="fas fa-thumbs-up"></i></button>
+                <button><i class="fas fa-cart-plus"></i></button>
             </div>
             <div class="inlineImages">
                 <img src="https://via.placeholder.com/150" alt="placeholder">
@@ -117,7 +166,7 @@
         <i class="far fa-copyright"></i>
         <span>Copy Right</span>
         <a href="" class="footerIcons"><i class="fab fa-facebook-f" id="firstFooterIcon"></i></a>
-        <a href="" class="footerIcons"><i class="fab fa-twitter" ></i></a>
+        <a href="" class="footerIcons"><i class="fab fa-twitter"></i></a>
         <a href="" class="footerIcons"><i class="fab fa-google-plus-g"></i></a>
         <a href="" class="footerIcons"><i class="fab fa-instagram"></i></a>
     </footer>
