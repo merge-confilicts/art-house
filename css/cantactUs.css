@@ -7,6 +7,9 @@ p{
     font-size: 20px;
     float: left;
     margin-left:400px;}
+    #teamm{
+        text-align: center;
+    }
 
 #social{
     float:right;
@@ -71,6 +74,12 @@ header nav ul div{
     word-spacing: 25px;
     
 }
+.divv{
+    display: inline-block;
+   
+    margin-left: 100px;
+    margin-top: 300px;
+}
 nav h1{
     text-align:center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -86,6 +95,7 @@ ul li a {
     text-decoration: none;
     font-family: cursive;
     color: black;
+    margin-bottom: 20px;
 }
 p{
     font-family: cursive;
@@ -98,45 +108,47 @@ article section{
     
 }
 .left{
-    padding-left: 0%;
-    padding-top:-500px ;
+    
+    padding-top:50px ;
+    
+}
+
+#phone{
+    margin-right:50px;
 }
 
 
 .right{
+    top:180px;
+   left:600px;
+  /* padding-left: 70%;*/
+   padding-bottom:30% ;
+   margin-bottom: 100px;
     
-    padding-left: 70%;
-    padding-top:0% ;
-    /*margin-bottom: -50px;*/
+    /* margin-top: -300px;*/
      position: absolute;
-     margin-top: -300px;
+     width: 150px;
    
    
 
 }
-
 
 form {
     width: 100%;
-    height: 60%;
-    background-color: #c7ccc7;
+    height: 50%;
+    background-color: #C7CCC7;
 }
-input{
-    
-    padding: 5px 5px;
-    border: 1px solid rgb(5, 5, 5);
-    border-radius: 4px;
-    margin: 8px 0;
-    
 
-}
+
+
 
 #submit{
     background-color: #044e4b;
     color: blanchedalmond;
-    width: 100px;
+    
     
 }
+
 
 article section h2 {
     font-family: Arial, Helvetica, sans-serif;
@@ -155,7 +167,7 @@ article section h2 {
 }
 
 
-h2{
+#titlee{
 
 
     text-align: center;
@@ -183,8 +195,8 @@ h2{
 #div3{
     width:30%;
     float: left;
-      margin: 0px 18px 30px 0px;
-      padding-left: 20px;
+      margin: 0px 30px 30px 0px;
+      padding-left:40px;
       
 
 }
