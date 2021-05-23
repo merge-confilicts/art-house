@@ -13,9 +13,9 @@
 <body>
     <header>
         <nav>
-            <ul class="main-nav">
-                <li class="push"><a href="index.html">Art House</a></li>
-                <li><a href="#">Gallary</a></li>
+            <ul>
+                <li><a href="index.html">Art House</a></li>
+                <li><a href="gallery.html">Gallary</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
                 <li><a href="shopping-page.html"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
@@ -33,13 +33,11 @@
                   <li>Click the "X" next to any item to remove it from your bag</li>
                 </ul>
               </div>
-          <header>
-            <h2>Your Bag</h2>
-          </header>
         </div>
       </section>
       <section class="deckcol-1">
         <div id="cart-container" class="card">
+          <h2>Your Bag</h2>
           <table id="cart">
             <thead>
               <tr>
@@ -53,14 +51,14 @@
                 <td>Total price <span id="total"> </span></td>
             </tfoot>
           </table>
-          <button id="checkout">Checkout</button>
+          <button id="checkout" onclick="appear()">Checkout</button>
         </div>
         
       </section>
     <div id="form">
     <form action="" id="Information">
         <fieldset>
-        <legend>Please enter your Info for checkout</legend>
+        <legend>Please enter your Info for your purchase</legend>
         <label for="Name">Name </label>
         <input type="text" id="Name" name="Name" placeholder="Name">
         <label for="Email">Email</label>
@@ -77,13 +75,22 @@
         </fieldset>
     </form>
     </div>
+
+    <div id="alertMsg">
+      <h4>Congratulation!</h4>
+      <p>
+        Your order has been placed
+      </p>
+      <button type="button" id="xButton">OK</button>
+  </div>
     </main>
   
     <footer>
       <p>&copy; Copyright to Team f6 and ASAC <i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i> <i class="fab fa-pinterest-p"></i></p>
       
     </footer>
-
+    
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/js/cart.js"></script>    
 </body>
 </html>
