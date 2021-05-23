@@ -1,5 +1,5 @@
 *{box-sizing: border-box;}
-body{font-family: Verdana,sans-serif;}
+body{font-family: Verdana,sans-serif;background-color: rgb(189, 182, 182);}
 
 /* .....................Nav Bar */
 nav{width: 100%;height: 40px;background-color: gray;text-align: right;font-size: 20px;position: fixed;}
@@ -9,18 +9,64 @@ ul li a{display: inline-block;padding-top: 13px;text-align: center;width: 80px;h
     text-decoration: none;color: white;font-size: 15px;}
 nav ul li a:hover{background-color: lightgray;}
 
+#like1{
+    width: 120px;
+    height: 35px;
+    position: fixed;
+    right:40px;
+    border-radius: 50px;
+    bottom: 30px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    font-size:30px;
+    color: blueviolet;
+  
+}
+
+#like1:hover{
+    background-color: #008CBA;
+    color: white;
+}
+
+
+
+
+
+#sidebar{
+width: 0;
+height: 100%;
+background-color:gray;
+transition: 0.5s;
+overflow-x: hidden;
+z-index: 1;
+position: fixed;
+top: 0;
+left: 0;
+display: inline-block;
+color: hotpink;
+text-align: center;
+font-size: 30px;
+font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+margin-top: 50px;
+
+  
+       
+}
+
 /*............ first backgroun Image */
 #firstPage{width: 100%;height: 400px;}
 #frontDiv h1{text-align: center;margin-top: -200px;margin-bottom: 170px;font-size: 60px;}
 
 /* ./.....................categories */
 #categories{text-align: center;}
-#categories span{border: 1px solid lightgray; padding: 15px;font-size: 20px;}
-#categories span:hover{background-color: lightgray;}
+#categories span{border: 1px solid lightgray; padding: 7px;font-size: 16px;border-radius: 3px 3px 0px 0px;
+    border-bottom: none;transition: 0.5s ease;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;margin-left: 20px;}
+#categories span:hover{background-color: gray;cursor: pointer;}
 
-/*...................... Paintings Div */
-#paintings{margin-top: 18px;}
-
+/*............................................................... Collections Div */
+.myCollections{display: none;margin-top: 9px;background-color: gray;}
+/* ...................... Section Selection Button */
 .sectionSelectionBtn{float: right; margin: 10px 15px;}
 .sectionBtn{width: 120px;height: 35px;}
 .dropContent{display: none;background-color: white; min-width: 120px;position: absolute;
@@ -28,16 +74,18 @@ nav ul li a:hover{background-color: lightgray;}
 .sectionSelectionBtn:hover .dropContent{display: block;}
 .dropContent p{font-size: 15px;padding: 7px 10px;}
 .dropContent p:hover{background-color: lightgray;}
-
-main img{width: 250px;height: 250px;}
-.inlineImages{display: inline-block;}
+/* ...................... Images display */
+main img{width: 250px;height: 250px;margin: 10px;transition: 0.8s;}
+.inlineImages{display: inline-block;transition: 0.8s;}
+.inlineImages button{position: relative;top: -30px;left: -120px;}
 
 /* ......................Decore Div */
-#decore{}
+/* #decore{}
 
 /* ......................Posters Div */
-#posters{}
+/* #posters{}  */
 
+/* ................................................................ Footer */
 footer{width: 100%;height: 200px;background-color: lightgray;text-align: center;padding-top: 100px;}
 footer span{padding-right: 30px;}
 footer i{color: black;}
