@@ -1,4 +1,3 @@
-
 "use strict";
 
 let collectionNumber = 0;
@@ -15,6 +14,7 @@ function showCollection(index) {
     categories[index].style.backgroundColor = "gray";
 }
 
+// ........................ Likes Button and Likes List
 let btnlike = document.getElementById('like1');
 let btnclose = document.getElementById('close');
 
