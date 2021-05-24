@@ -84,7 +84,6 @@ header nav ul div{
 }
 .divv{
     display: inline-block;
-   
     margin-left: 100px;
     margin-top: 800px;
 }
@@ -127,7 +126,7 @@ article section{
 
 
 .right{
-   top:180px;
+   top:200px;
    left:600px;
   /* padding-left: 70%;*/
    padding-bottom:30% ;
