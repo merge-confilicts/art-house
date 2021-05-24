@@ -8,7 +8,9 @@ function appear() {
 
 let but = document.getElementById('submitBtn'); 
 let form = document.getElementById('Information'); 
-let popup = document.getElementById('alertMsg')
+let popup = document.getElementById('alertMsg');
+let okBtn = document.getElementById('okButton');
+
 but.addEventListener('click', removeForm);
 function removeForm(event) {
 event.preventDefault(); 
@@ -16,26 +18,28 @@ form.style.display="none";
 popup.style.display="block"; 
 }
 
-let butt = document.getElementById('xButton'); 
-butt.addEventListener('click', restartPage)
-function restartPage(event){
-    
+but.addEventListener('onclick', okMessage); 
+okBtn.addEventListener('click', okMessage);
 
+function okMessage(event) {
+    let slideShow = document.getElementById('alertMsg');
+    let displaySetting = slideShow.style.display;
+
+    if (displaySetting == 'block') {
+        slideShow.style.display = 'none';
+    } else if (okBtn.addEventListener) {
+        slideShow.style.display = 'block';
+    }
 }
+
+
 
 // let btn = document.getElementById('submitBtn');
 // let xBtn = document.getElementById('xButton');
 // btn.addEventListener('click', tourShow);
 // xBtn.addEventListener('click', tourShow);
 // function tourShow(event) {
-//     let slideShow = document.getElementById('tour');
-//     let displaySetting = slideShow.style.display;
-//     if (displaySetting == 'block') {
-//         slideShow.style.display = 'none';
-//         btn.innerHTML = 'tour';
-//     } else if (xBtn.addEventListener) {
-//         slideShow.style.display = 'block';
-//     }
+    
 // }
 
 

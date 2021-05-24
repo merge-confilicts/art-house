@@ -1,21 +1,7 @@
-<<<<<<< HEAD
- let form  = document.getElementById('joinForm');
 
-form.addEventListener('click',handelClicks)
-let btn = document.getElementById('submitm');
-let xBtn = document.getElementById('xsubmit');
-btn.addEventListener('click', handelClicks);
-xBtn.addEventListener('click', handelClicks);
-function handelClicks(event) {
-    event.preventDefault();
-    let slideShow = document.getElementById('submitm');
-    let displaySetting = slideShow.style.display;
-    if (displaySetting == 'block') {
-        slideShow.style.display = 'none';
-        btn.innerHTML = 'submitm';
-=======
 'use strict';
 
+//................Tour button code.....................
 let btn = document.getElementById('button');
 let xBtn = document.getElementById('xButton');
 btn.addEventListener('click', tourShow);
@@ -28,14 +14,14 @@ function tourShow(event) {
     if (displaySetting == 'block') {
         slideShow.style.display = 'none';
         btn.innerHTML = 'tour';
->>>>>>> 26aa6bbd8d3f4d28a7a98a515d637f22d2f8256c
+
     } else if (xBtn.addEventListener) {
         slideShow.style.display = 'block';
     }
 }
 
-<<<<<<< HEAD
-=======
+//................Slide show code.....................
+
 let index = 1;
 showSlide(index);
 function plusSlides(action) {
@@ -52,8 +38,26 @@ function showSlide(n) {
     }
 
 
-    slides[index-1].style.display = "block";
+    slides[index - 1].style.display = "block";
 
 }
->>>>>>> 26aa6bbd8d3f4d28a7a98a515d637f22d2f8256c
+
+//................Join us form code.....................
+
+let form = document.getElementById('joinForm');
+
+form.addEventListener('click', handelClicks)
+let btn1 = document.getElementById('submitm');
+let xBtn1 = document.getElementById('xsubmit');
+btn1.addEventListener('click', handelClicks);
+xBtn1.addEventListener('click', handelClicks);
+function handelClicks(event) {
+    event.preventDefault();
+    let slideShow = document.getElementById('submitm');
+    let displaySetting = slideShow.style.display;
+    if (displaySetting == 'block') {
+        slideShow.style.display = 'none';
+    }
+
+}
 
