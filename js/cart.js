@@ -15,11 +15,9 @@ popup.style.display="block";
 
 but.addEventListener('onclick', okMessage); 
 okBtn.addEventListener('click', okMessage);
-
 function okMessage(event) {
     let slideShow = document.getElementById('alertMsg');
     let displaySetting = slideShow.style.display;
-
     if (displaySetting == 'block') {
         slideShow.style.display = 'none';
     } else if (okBtn.addEventListener) {

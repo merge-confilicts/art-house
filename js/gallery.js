@@ -38,7 +38,6 @@ function Paintings(paintName, price) { // ........Paintings Constructor
     this.paintName = paintName.split('by')[0];
     this.price = price;
     this.source = 'Images/Paints/' + paintName;
-    // this.likebtn = 'likes';
     paintingsArray.push(this);
 }
 let decore = ['Ceramic vase by Job Heykamp.jpg', 'Ceramics by Job Heykamp.jpg', 'Daum by Nancy.jpg', 'dragon by Emile Galle.jpg', 'Pottery created by the Hohokam people.jpg', 'Wisteria by Emile Galle.jpg'];
@@ -48,10 +47,12 @@ function Decore(decoreName, price) { // ..........Decore Constructor
     this.decoreName = decoreName.split('by')[0];
     this.price = price;
     this.source = 'Images/Decore/' + decoreName;
+
     decoreArray.push(this);
 }
-let posters = ['Crater Lake Milky Way by zack.jpg', 'GREENE  CHECHEN ISLAND by Heun Jung.jpg', 'joshua tree by natalie.jpg', 'New Zealand lake by  Jess Santos.jpg', 'OLGA KRAVETS  BALIKESIR TREE by  NOOR.jpg', 'PEP BONET by Daniel Skwarna.jpg', 'SEBASTIAN LISTE by Justin Mott.jpg', 'utah mountains by edward.jpg'];
-let posterPrices = ['23$', '12$', '56$', '80$', '23$', '67$', '63$', '34$'];
+
+let posters = ['Crater Lake Milky Way by zack.jpg','GREENE  CHECHEN ISLAND by Heun Jung.jpg','joshua tree by natalie.jpg','New Zealand lake by  Jess Santos.jpg','OLGA KRAVETS  BALIKESIR TREE by  NOOR.jpg','PEP BONET by Daniel Skwarna.jpg','SEBASTIAN LISTE by Justin Mott.jpg','utah mountains by edward.jpg'];
+let posterPrices = ['23$','12$','56$','80$','23$','67$','63$','34$'];
 let postersArray = [];
 function Poster(posterName, price) { // ..........Posters Constructor
     this.posterName = posterName;
@@ -79,10 +80,10 @@ console.log(decoreArray);
 console.log(postersArray);
 // ............................................... Render Functions
 // ......Paintings Render
+
 let paintingsDiv = document.getElementById('paintingsContainer');
 let products = [];
 function renderPaintings() {
-    // let cartPlus = document.getElementsByClassName('fa-cart-plus');
     for (let i = 0; i < paintingsArray.length; i++) {
         let imgEL = document.createElement('img');
         paintingsDiv.appendChild(imgEL);
@@ -105,7 +106,6 @@ function renderPaintings() {
 
         cartbtnEl.addEventListener('click', saveTheProducts);
 
-
     }
 
 }
@@ -118,6 +118,7 @@ function saveThelikes() {
                 products.push(save);
                 break;
         }
+
     }
 }
 saveThelikes();
@@ -167,3 +168,6 @@ function saveToLocalStorage() {
     let data = JSON.stringify(products);
     localStorage.setItem('product', data);
 }
+
+
+// ............................................... Adding Event Listners

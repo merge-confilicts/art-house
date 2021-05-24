@@ -32,28 +32,3 @@ function showSlide(n) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-
-
-    slides[index - 1].style.display = "block";
-
-}
-
-//................Join us form code.....................
-
-let form = document.getElementById('joinForm');
-
-form.addEventListener('submit', handelClicks);
-let btn1 = document.getElementById('submitm');
-let xBtn1 = document.getElementById('xsubmit');
-btn1.addEventListener('click', handelClicks);
-xBtn1.addEventListener('click', handelClicks);
-function handelClicks(event) {
-    event.preventDefault();
-    let slideShow = document.getElementById('submitm');
-    let displaySetting = slideShow.style.display;
-    if (displaySetting == 'block') {
-        slideShow.style.display = 'none';
-    }
-
-}
-
