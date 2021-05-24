@@ -38,6 +38,7 @@ function Paintings(paintName, price) { // ........Paintings Constructor
     this.paintName = paintName.split('by')[0];
     this.price = price;
     this.source = 'Images/Paints/' + paintName;
+
     paintingsArray.push(this);
 }
 let decore = ['Ceramic vase by Job Heykamp.jpg', 'Ceramics by Job Heykamp.jpg', 'Daum by Nancy.jpg', 'dragon by Emile Galle.jpg', 'Pottery created by the Hohokam people.jpg', 'Wisteria by Emile Galle.jpg'];
@@ -55,7 +56,7 @@ let posters = ['Crater Lake Milky Way by zack.jpg', 'GREENE  CHECHEN ISLAND by H
 let posterPrices = ['23$', '12$', '56$', '80$', '23$', '67$', '63$', '34$'];
 let postersArray = [];
 function Poster(posterName, price) { // ..........Posters Constructor
-    this.posterName = posterName;
+    this.posterName = posterName.split('by')[0];
     this.price = price;
     this.source = 'Images/Posters/' + posterName;
 
@@ -78,8 +79,7 @@ creatProducts();
 console.log(paintingsArray);
 console.log(decoreArray);
 console.log(postersArray);
-// ....................................................... Render Functions
-// ......Paintings Render
+// ............................................... Render Functions
 
 let paintingsDiv = document.getElementById('paintingsContainer');
 function renderPaintings() {
@@ -88,91 +88,154 @@ function renderPaintings() {
         paintingsDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${paintingsArray[i].source}`);
 
+        imgEL.setAttribute('title', `../${paintingsArray[i].paintName}`);
+
+
+        // Adding like and cart buttons
         let likebtnEl = document.createElement('button');
         paintingsDiv.appendChild(likebtnEl);
         likebtnEl.textContent = 'likes';
 
+        likebtnEl.setAttribute('onclick', `getLikes('${paintingsArray[i].paintName}')`);
         let cartbtnEl = document.createElement('button');
         paintingsDiv.appendChild(cartbtnEl);
         cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
-        // ...... Adding event listners
-        likebtnEl.addEventListener('click', getLikes());
-        cartbtnEl.addEventListener('click', getProducts());
+        cartbtnEl.setAttribute('onclick', `getProducts('${paintingsArray[i].paintName}','${paintingsArray[i].paitsPrices}'`);
     }
 }
-let likesList = []
-let productsList = [];
-function getLikes(event) {
-    if (event !== null) {
-        // let like = event.target.class;
-        // likesList.push(like);
-
-        // setting likes to local storage
-        let data = JSON.stringify(likesList);
-        localStorage.setItem('like',data1);
-    }
-}
-function getProducts(event){
-
-}
-// function saveThelikes() {
-//     for (let index = 0; index < paintingsArray.length; index++) {
-//         let save = paintingsArray[index].paintName;
-//         switch (products) {
-//             case 'like':
-//                 products.push(save);
-//                 break;
-//         }
-
-//     }
-// }
-// saveThelikes();
-
-// function saveTheProducts() {
-//     for (let index = 0; index < paintingsArray.length; index++) {
-//         let save = paintingsArray[index].paintName;
-//         switch (products) {
-//             case 'add':
-//                 products.push(save);
-//                 break;
-//         }
-//     }
-// }
-// saveTheProducts();
-
-console.log(likesList);
-
 renderPaintings();
+
 // ..........................Decore Render
 function renderDecore() {
-    let paintingsDiv = document.getElementById('decoreContainer');
+    let decoreDiv = document.getElementById('decoreContainer');
     for (let i = 0; i < decoreArray.length; i++) {
+
         let imgEL = document.createElement('img');
-        paintingsDiv.appendChild(imgEL);
+        decoreDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${decoreArray[i].source}`);
-        imgEL.setAttribute('title', `${paintingsArray[i].paintName}`);
+
+        imgEL.setAttribute('title', `${decoreArray[i].decoreName}`);
+
+        // Adding like and cart buttons
+        let likebtnEl = document.createElement('button');
+        decoreDiv.appendChild(likebtnEl);
+        likebtnEl.textContent = 'likes';
+        likebtnEl.setAttribute('onclick', `getLikes('${decoreArray[i].decoreName}')`);
+
+        let cartbtnEl = document.createElement('button');
+        decoreDiv.appendChild(cartbtnEl);
+        cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
+        cartbtnEl.setAttribute('onclick', `getProducts('${decoreArray[i].decoreName}','${decoreArray[i].price}')`);
 
 
     }
 }
 renderDecore();
+
 // ..........................Posters Render
 function renderPosters() {
-    let paintingsDiv = document.getElementById('PostersContainer');
+    let postersDiv = document.getElementById('PostersContainer');
     for (let i = 0; i < postersArray.length; i++) {
+
         let imgEL = document.createElement('img');
-        paintingsDiv.appendChild(imgEL);
+        postersDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${postersArray[i].source}`);
+        imgEL.setAttribute('title', `../${postersArray[i].paintName}`);
+
+        // Adding like and cart buttons
+        let likebtnEl = document.createElement('button');
+        postersDiv.appendChild(likebtnEl);
+        likebtnEl.textContent = 'likes';
+        likebtnEl.setAttribute('onclick', `getLikes('${postersArray[i].posterName}')`);
+
+        let cartbtnEl = document.createElement('button');
+        postersDiv.appendChild(cartbtnEl);
+        cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
+        cartbtnEl.setAttribute('onclick', `getProducts('${postersArray[i].posterName}','${postersArray[i].price}')`);
     }
 }
 renderPosters();
 
-// ............................................... Adding Event Listners
+// ........................ Adding Likes and Products to Local storage
+let likesList = [];
+let productsList = [];
+// Adding Likes ...
+let divEl = document.getElementById('sidebar');
+function getLikes(like) {
+    likesList.push(like);
+    console.log(likesList);
+    let data = JSON.stringify(likesList);
+    localStorage.setItem('like', data);
+    renderLikes();
+}
+getLikes();
 
-function saveToLocalStorage() {
-    let data = JSON.stringify(products);
+// Adding Products ...
+function getProducts(product, price) {
+    productsList.push(product, price);
+    let data = JSON.stringify(productsList);
     localStorage.setItem('product', data);
 }
 
+// function settingpaints(){
+//     let data = JSON.stringify(likesList);
+//     localStorage.setItem('paintsImg',data);
+// }
 
-// ............................................... Adding Event Listners
+// function gettingLikes() {
+//     let stringlikes = localStorage.getItem('paintsImg')
+//     let normalLikes = JSON.parse(stringLikes);
+//     if (normalLikes !== null) {
+//         likesList = normalLikes;
+//         return normalLikes;
+//     }
+// }
+// settingpaints();
+
+// ......................... Render Likes to Side Bar
+function renderLikes() {
+    if (likesList !== null) {
+        for (let i = 0; i < likesList.length; i++) {
+            let div1EL = document.createElement('div');
+            divEl.appendChild(div1EL);
+
+            let stringLikes = localStorage.getItem('paintsImg')
+            let normalLikes = JSON.parse(stringLikes);
+            console.log(normalLikes);
+
+            div1EL.textContent = normalLikes;
+        }
+    }
+}
+
+
+// .............................. sort by
+let selection1 = document.getElementById("sort");
+selection1.addEventListener('change', sortselection1)
+function sortselection1(event) {
+    /* for (let i = 0; i < paintingsArray.length; i++) {
+         
+         paintingsArray.sort();
+         
+     console.log(paintingsArray);
+ 
+ 
+    }*/
+
+    console.log(selection1.value);
+    if (selection1.value == "section1") {
+
+        paintingsDiv.innerHTML = ""
+        renderPaintings([paintingsArray[0], paintingsArray[1]]);
+
+    } else if (selection1.value == "section2") {
+        paintingsDiv.innerHTML = ""
+        renderPaintings([paintingsArray[2], paintingsArray[3]]);
+
+    } else if (selection1.value == "section3") {
+        paintingsDiv.innerHTML = ""
+        renderPaintings([paintingsArray[4], paintingsArray[5]]);
+
+
+    }
+}
