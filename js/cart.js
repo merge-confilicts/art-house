@@ -12,6 +12,7 @@ event.preventDefault();
 form.style.display="none";
 popup.style.display="block"; 
 }
+
 but.addEventListener('onclick', okMessage); 
 okBtn.addEventListener('click', okMessage);
 function okMessage(event) {
@@ -24,19 +25,14 @@ function okMessage(event) {
     }
 }
 
+
+
 // let btn = document.getElementById('submitBtn');
 // let xBtn = document.getElementById('xButton');
 // btn.addEventListener('click', tourShow);
 // xBtn.addEventListener('click', tourShow);
 // function tourShow(event) {
-//     let slideShow = document.getElementById('tour');
-//     let displaySetting = slideShow.style.display;
-//     if (displaySetting == 'block') {
-//         slideShow.style.display = 'none';
-//         btn.innerHTML = 'tour';
-//     } else if (xBtn.addEventListener) {
-//         slideShow.style.display = 'block';
-//     }
+    
 // }
 
 
