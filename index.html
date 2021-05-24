@@ -16,8 +16,27 @@
 <body>
     <div id="tour">
         <h4>Art iteams</h4>
-        <img src="https://shremal.com/wp-content/uploads/2017/03/placeholder-light-1.gif" alt="tour">
-        <p>Description for the images in the tour </p>
+        <div class="mySlide">
+            <span class="slideCounter">1 / 3</span>
+            <img src="https://shremal.com/wp-content/uploads/2017/03/placeholder-light-1.gif" alt="tour"
+                class="SlideImages" />
+            <p class="SlideImagetitle">Description for the images in the tour </p>
+        </div>
+        <div class="mySlide">
+            <span class="slideCounter">2 / 3</span>
+            <img src="https://shremal.com/wp-content/uploads/2017/03/placeholder-light-1.gif" alt="tour"
+                class="SlideImages" />
+            <p class="SlideImagetitle">Description for the images in the tour </p>
+        </div>
+        <div class="mySlide">
+            <span class="slideCounter">3 / 3</span>
+            <img src="https://shremal.com/wp-content/uploads/2017/03/placeholder-light-1.gif" alt="tour"
+                class="SlideImages" />
+            <p class="SlideImagetitle">Description for the images in the tour </p>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <button type="button" id="xButton">X</button>
     </div>
     <header>
         <nav>
@@ -31,7 +50,7 @@
         <span></span>
         <h1>Art House</h1>
         <p>the art place for all you needs </p>
-        <button>Tour</button>
+        <button type="button" id="button">Tour</button>
         <img src="https://shremal.com/wp-content/uploads/2017/03/placeholder-light-1.gif" alt="mainPage">
     </header>
     <main>
@@ -65,7 +84,7 @@
                 <p> <span id="artists">A pharagraph for the new artists</span> <br /> who are intresting in launching
                     thier
                     work in the <br /> <span id="website">website</span> </p>
-                <button>Join Us</button>
+                    <a href="/html/contact-us.html" target="_top">Join Us</a>
             </article>
             <article>
                 <img src="https://shremal.com/wp-content/uploads/2017/03/placeholder-light-1.gif" alt="2nplaceholder">
@@ -80,6 +99,7 @@
         <i class="fab fa-twitter"></i>
         <i class="fab fa-pinterest"></i>
     </footer>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
