@@ -156,13 +156,21 @@ function renderLikes() {
 }
 renderPaintings();
   
+
 // ......Decore Render
+
 function renderDecore() {
+
+  
     let decoreDiv = document.getElementById('decoreContainer');
     for (let i = 0; i < decoreArray.length; i++) {
+
         let imgEL = document.createElement('img');
         decoreDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${decoreArray[i].source}`);
+
+        
+
         imgEL.setAttribute('title',`${decoreArray[i].decoreName}`);
 
         // Adding like and cart buttons
@@ -175,6 +183,7 @@ function renderDecore() {
         decoreDiv.appendChild(cartbtnEl);
         cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
         cartbtnEl.setAttribute('onclick',`getProducts('${decoreArray[i].decoreName}','${decoreArray[i].price}')`);
+
 
     }
     // console.log(renderLikes)
@@ -246,8 +255,12 @@ renderPaintings();
 renderDecore();
 // ......Posters Render
 function renderPosters() {
+
+    
+
     let postersDiv = document.getElementById('PostersContainer');
     for (let i = 0; i < postersArray.length; i++) {
+
         let imgEL = document.createElement('img');
         postersDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${postersArray[i].source}`);
@@ -266,6 +279,52 @@ function renderPosters() {
     }
 }
 renderPosters();
+
+
+// ............................................... Adding Event Listners
+
+
+
+//sortbyy
+let selection1=document.getElementById("sort");
+
+
+selection1.addEventListener('change',sortselection1)
+
+function sortselection1(event)
+{
+   /* for (let i = 0; i < paintingsArray.length; i++) {
+        
+        paintingsArray.sort();
+        
+    console.log(paintingsArray);
+
+
+   }*/
+
+ console.log(selection1.value);
+ if(selection1.value=="section1"){
+    
+    paintingsDiv.innerHTML=""
+    renderPaintings([paintingsArray[0],paintingsArray[1]]) ;
+
+ }else if(selection1.value=="section2"){
+    paintingsDiv.innerHTML=""
+  renderPaintings([paintingsArray[2],paintingsArray[3]]) ;
+
+ }else if(selection1.value=="section3"){
+    paintingsDiv.innerHTML=""
+    renderPaintings([paintingsArray[4],paintingsArray[5]]) ;
+   
+
+}
+}
+
+
+
+   
+
+
 
 
 
@@ -287,4 +346,5 @@ function getProducts(product,price){
     let data = JSON.stringify(productsList);
     localStorage.setItem('product',data);
 }
+
 
