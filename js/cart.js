@@ -1,26 +1,27 @@
 'use strict' 
-
-
 function appear() { 
-
-	document.getElementById("form").style.display="block"; 
+    document.getElementById("form").style.display="block"; 
 }
-
 let but = document.getElementById('submitBtn'); 
 let form = document.getElementById('Information'); 
-let popup = document.getElementById('alertMsg')
+let popup = document.getElementById('alertMsg');
+let okBtn = document.getElementById('okButton');
 but.addEventListener('click', removeForm);
 function removeForm(event) {
 event.preventDefault(); 
 form.style.display="none";
 popup.style.display="block"; 
 }
-
-let butt = document.getElementById('xButton'); 
-butt.addEventListener('click', restartPage)
-function restartPage(event){
-    
-
+but.addEventListener('onclick', okMessage); 
+okBtn.addEventListener('click', okMessage);
+function okMessage(event) {
+    let slideShow = document.getElementById('alertMsg');
+    let displaySetting = slideShow.style.display;
+    if (displaySetting == 'block') {
+        slideShow.style.display = 'none';
+    } else if (okBtn.addEventListener) {
+        slideShow.style.display = 'block';
+    }
 }
 
 // let btn = document.getElementById('submitBtn');
