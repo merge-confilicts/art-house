@@ -163,3 +163,4 @@ function getProducts(product,price){
     let data = JSON.stringify(productsList);
     localStorage.setItem('product',data);
 }
+console.log(productsList); 
