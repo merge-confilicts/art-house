@@ -54,7 +54,7 @@ let posters = ['Crater Lake Milky Way by zack.jpg','GREENE  CHECHEN ISLAND by He
 let posterPrices = ['23$','12$','56$','80$','23$','67$','63$','34$'];
 let postersArray = [];
 function Poster(posterName, price) { // ..........Posters Constructor
-    this.posterName = posterName;
+    this.posterName = posterName.split('by')[0];
     this.price = price;
     this.source = 'Images/Posters/' + posterName;
 
@@ -79,35 +79,81 @@ console.log(decoreArray);
 console.log(postersArray);
 // ............................................... Render Functions
 // ......Paintings Render
+let paintingsDiv = document.getElementById('paintingsContainer');
 function renderPaintings() {
-    let paintingsDiv = document.getElementById('paintingsContainer');
     for (let i = 0; i < paintingsArray.length; i++) {
         let imgEL = document.createElement('img');
         paintingsDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${paintingsArray[i].source}`);
+        imgEL.setAttribute('title',`../${paintingsArray[i].paintName}`);
+
+        // Adding like and cart buttons
+        let likebtnEl = document.createElement('button');
+        paintingsDiv.appendChild(likebtnEl);
+        likebtnEl.textContent = 'likes';
+        likebtnEl.setAttribute('onclick',`getLikes('${paintingsArray[i].paintName}')`);
+
+        let cartbtnEl = document.createElement('button');
+        paintingsDiv.appendChild(cartbtnEl);
+        cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
+    cartbtnEl.setAttribute('onclick',`getProducts('${paintingsArray[i].paintName}','${paintingsArray[i].price}')`);
     }
 }
 renderPaintings();
 // ......Decore Render
 function renderDecore() {
-    let paintingsDiv = document.getElementById('decoreContainer');
+    let decoreDiv = document.getElementById('decoreContainer');
     for (let i = 0; i < decoreArray.length; i++) {
         let imgEL = document.createElement('img');
-        paintingsDiv.appendChild(imgEL);
+        decoreDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${decoreArray[i].source}`);
-        imgEL.setAttribute('title',`${paintingsArray[i].paintName}`);
+        imgEL.setAttribute('title',`${decoreArray[i].decoreName}`);
+
+        // Adding like and cart buttons
+        let likebtnEl = document.createElement('button');
+        decoreDiv.appendChild(likebtnEl);
+        likebtnEl.textContent = 'likes';
+        likebtnEl.setAttribute('onclick',`getLikes('${decoreArray[i].decoreName}')`);
+
+        let cartbtnEl = document.createElement('button');
+        decoreDiv.appendChild(cartbtnEl);
+        cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
+        cartbtnEl.setAttribute('onclick',`getProducts('${decoreArray[i].decoreName}','${decoreArray[i].price}')`);
     }
 }
 renderDecore();
 // ......Posters Render
 function renderPosters() {
-    let paintingsDiv = document.getElementById('PostersContainer');
+    let postersDiv = document.getElementById('PostersContainer');
     for (let i = 0; i < postersArray.length; i++) {
         let imgEL = document.createElement('img');
-        paintingsDiv.appendChild(imgEL);
+        postersDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${postersArray[i].source}`);
+        imgEL.setAttribute('title', `../${postersArray[i].paintName}`);
+
+        // Adding like and cart buttons
+        let likebtnEl = document.createElement('button');
+        postersDiv.appendChild(likebtnEl);
+        likebtnEl.textContent = 'likes';
+        likebtnEl.setAttribute('onclick',`getLikes('${postersArray[i].posterName}')`);
+
+        let cartbtnEl = document.createElement('button');
+        postersDiv.appendChild(cartbtnEl);
+        cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
+        cartbtnEl.setAttribute('onclick',`getProducts('${postersArray[i].posterName}','${postersArray[i].price}')`);
     }
 }
 renderPosters();
 
-// ............................................... Adding Event Listners
+// ............................................... Adding Likes and Products to List and Local storage
+let likesList = [];
+let productsList = [];
+function getLikes(like) {
+    likesList.push(like);
+    console.log(likesList);
+}
+function getProducts(product,price){
+    productsList.push(product,price);
+    let data = JSON.stringify(productsList);
+    localStorage.setItem('product',data);
+}
