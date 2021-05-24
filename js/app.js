@@ -48,3 +48,17 @@ function showSlide(n) {
        
 //     }
 // }
+
+function settingpaints(){
+    let data = JSON.stringify(products);
+    localStorage.setItem('paintsImg',data);
+}
+
+function gettingppaints(){
+    let stringpaint = localStorage.getItem('paintsImg')
+    let normalpaint = JSON.parse(stringpaint);
+    if (normalpaint !== null){
+        products =normalpaint ;
+  }
+}
+settingpaints();
