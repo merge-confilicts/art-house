@@ -19,7 +19,7 @@ let btnlike = document.getElementById('like1');
 let btnclose = document.getElementById('close');
 
 btnlike.addEventListener('click', opensidebar);
-btnclose.addEventListener('click',closeSideBar);
+btnclose.addEventListener('click', closeSideBar);
 function opensidebar(event) {
     document.getElementById("sidebar").style.width = "200px";
     document.getElementById("sidebar").style.display = "block";
@@ -32,12 +32,13 @@ function closeSideBar() {
 // .............................................. Creating Constructors
 let paints = ["Bow by Clare Grill.jpg", "Composition X by Wassily Kandinsky.jpg", "cubism still life painting by Anis.jpg", "skyline city by Joun doe.jpg", "Still Life Tazza by jacob.jpg", "whatever by khalid.jpg"];
 let paitsPrices = ['15$', '20$', '7$', '75$', '30$', '175$'];
+
 let paintingsArray = [];
 function Paintings(paintName, price) { // ........Paintings Constructor
     this.paintName = paintName.split('by')[0];
     this.price = price;
     this.source = 'Images/Paints/' + paintName;
-
+  
     paintingsArray.push(this);
 }
 let decore = ['Ceramic vase by Job Heykamp.jpg', 'Ceramics by Job Heykamp.jpg', 'Daum by Nancy.jpg', 'dragon by Emile Galle.jpg', 'Pottery created by the Hohokam people.jpg', 'Wisteria by Emile Galle.jpg'];
@@ -50,6 +51,7 @@ function Decore(decoreName, price) { // ..........Decore Constructor
 
     decoreArray.push(this);
 }
+
 let posters = ['Crater Lake Milky Way by zack.jpg','GREENE  CHECHEN ISLAND by Heun Jung.jpg','joshua tree by natalie.jpg','New Zealand lake by  Jess Santos.jpg','OLGA KRAVETS  BALIKESIR TREE by  NOOR.jpg','PEP BONET by Daniel Skwarna.jpg','SEBASTIAN LISTE by Justin Mott.jpg','utah mountains by edward.jpg'];
 let posterPrices = ['23$','12$','56$','80$','23$','67$','63$','34$'];
 let postersArray = [];
@@ -80,11 +82,13 @@ console.log(postersArray);
 // ............................................... Render Functions
 // ......Paintings Render
 let paintingsDiv = document.getElementById('paintingsContainer');
+let products = [];
 function renderPaintings() {
     for (let i = 0; i < paintingsArray.length; i++) {
         let imgEL = document.createElement('img');
         paintingsDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${paintingsArray[i].source}`);
+
         imgEL.setAttribute('title',`../${paintingsArray[i].paintName}`);
 
         // Adding like and cart buttons
@@ -100,6 +104,7 @@ function renderPaintings() {
     }
 }
 renderPaintings();
+  
 // ......Decore Render
 function renderDecore() {
     let decoreDiv = document.getElementById('decoreContainer');
@@ -144,6 +149,7 @@ function renderPosters() {
     }
 }
 renderPosters();
+
 
 // ............................................... Adding Likes and Products to List and Local storage
 let likesList = [];
