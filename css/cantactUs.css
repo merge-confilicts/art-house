@@ -64,20 +64,26 @@ header nav ul li{
 
 header nav{
     display: inline-block;
-    margin-top: 2px;
+    margin-top: 5px;
     background-color: rgb(151, 148, 148);
     width: 100%;
+    background-image: url("https://www.unnatiunlimited.com/wp-content/uploads/2018/01/Shayona-Banner-Page-Banner-Contact-us.jpg");
+    /* height:30%; */
+    /* color: blanchedalmond; */
 }
+/* header nav ul{
+    background-image: url("https://media.secventia.se/2016/04/contact-us-Banner.png");
+} */
 header nav ul div{
     display: inline-block;
     margin-left:900px;
     margin-bottom:20px;
     word-spacing: 25px;
+    /* color: white; */
     
 }
 .divv{
     display: inline-block;
-   
     margin-left: 100px;
     margin-top: 800px;
 }
@@ -120,7 +126,7 @@ article section{
 
 
 .right{
-   top:180px;
+   top:200px;
    left:600px;
   /* padding-left: 70%;*/
    padding-bottom:30% ;
@@ -183,7 +189,7 @@ form {
        
 }
 #submitm{
-    display: none;
+    /* display: none; */
     width:50%;
     height: 40%;
 }

@@ -1,4 +1,6 @@
+
 'use strict';
+
 //................Tour button code.....................
 let btn = document.getElementById('button');
 let xBtn = document.getElementById('xButton');
@@ -14,7 +16,9 @@ function tourShow(event) {
         slideShow.style.display = 'block';
     }
 }
+
 //................Slide show code.....................
+
 let index = 1;
 showSlide(index);
 function plusSlides(action) {
@@ -28,23 +32,43 @@ function showSlide(n) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+
     slides[index - 1].style.display = "block";
 }
 //................Join us form code.....................
 
-let form  = document.getElementById('joinForm');
+// let form  = document.getElementById('joinForm');
 
-form.addEventListener('click',handelClicks)
-let btn1 = document.getElementById('submitm');
-let xBtn1 = document.getElementById('xsubmit');
-btn1.addEventListener('click', handelClicks);
-xBtn1.addEventListener('click', handelClicks);
-function handelClicks(event) {
-    event.preventDefault();
-    let slideShow = document.getElementById('submitm');
-    let displaySetting = slideShow.style.display;
-    if (displaySetting == 'block') {
-        slideShow.style.display = 'none';
+// form.addEventListener('click',handelClicks)
+// let btn1 = document.getElementById('submitm');
+// let xBtn1 = document.getElementById('xsubmit');
+// btn1.addEventListener('click', handelClicks);
+// xBtn1.addEventListener('click', handelClicks);
+// function handelClicks(event) {
+//     event.preventDefault();
+//     let slideShow = document.getElementById('submitm');
+//     let displaySetting = slideShow.style.display;
+//     if (displaySetting == 'block') {
+//         slideShow.style.display = 'none';
        
-    }
+//     }
+// }
+
+function settingpaints(){
+    let data = JSON.stringify(products);
+    localStorage.setItem('paintsImg',data);
 }
+
+function gettingppaints(){
+    let stringpaint = localStorage.getItem('paintsImg')
+    let normalpaint = JSON.parse(stringpaint);
+    if (normalpaint !== null){
+        products =normalpaint ;
+  }
+}
+settingpaints();
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 500d1f50bad1e23df862bbcc8775932067aaa2bc
