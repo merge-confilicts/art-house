@@ -79,30 +79,32 @@ console.log(decoreArray);
 console.log(postersArray);
 // ............................................... Render Functions
 // ......Paintings Render
-function renderPaintings() {
-    let paintingsDiv = document.getElementById('paintingsContainer');
-    for (let i = 0; i < paintingsArray.length; i++) {
+let paintingsDiv = document.getElementById('paintingsContainer');
+function renderPaintings(a) {
+   // let paintingsDiv = document.getElementById('paintingsContainer');
+    for (let i = 0; i < a.length; i++) {
         let imgEL = document.createElement('img');
         paintingsDiv.appendChild(imgEL);
-        imgEL.setAttribute('src', `../${paintingsArray[i].source}`);
+        imgEL.setAttribute('src', `../${a[i].source}`);
     }
 }
-renderPaintings();
+renderPaintings(paintingsArray);
 // ......Decore Render
+
 function renderDecore() {
-    let paintingsDiv = document.getElementById('decoreContainer');
-    for (let i = 0; i < decoreArray.length; i++) {
+  let paintingsDiv = document.getElementById('decoreContainer');
+    for (let i = 0; i <decoreArray.length; i++) {
         let imgEL = document.createElement('img');
         paintingsDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${decoreArray[i].source}`);
-        imgEL.setAttribute('title',`${paintingsArray[i].paintName}`);
+        
     }
 }
 renderDecore();
 // ......Posters Render
 function renderPosters() {
     let paintingsDiv = document.getElementById('PostersContainer');
-    for (let i = 0; i < postersArray.length; i++) {
+    for (let i = 0; i <postersArray.length; i++) {
         let imgEL = document.createElement('img');
         paintingsDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${postersArray[i].source}`);
@@ -111,3 +113,46 @@ function renderPosters() {
 renderPosters();
 
 // ............................................... Adding Event Listners
+
+
+
+//sortbyy
+let selection1=document.getElementById("sort");
+
+
+selection1.addEventListener('change',sortselection1)
+
+function sortselection1(event)
+{
+   /* for (let i = 0; i < paintingsArray.length; i++) {
+        
+        paintingsArray.sort();
+        
+    console.log(paintingsArray);
+
+
+   }*/
+
+ console.log(selection1.value);
+ if(selection1.value=="section1"){
+    
+    paintingsDiv.innerHTML=""
+    renderPaintings([paintingsArray[0],paintingsArray[1]]) ;
+
+ }else if(selection1.value=="section2"){
+    paintingsDiv.innerHTML=""
+  renderPaintings([paintingsArray[2],paintingsArray[3]]) ;
+
+ }else if(selection1.value=="section3"){
+    paintingsDiv.innerHTML=""
+    renderPaintings([paintingsArray[4],paintingsArray[5]]) ;
+   
+
+}
+}
+
+
+
+   
+
+

@@ -39,37 +39,53 @@
         <!-- ........................................................Paintings -->
         <div id="paintings" class="myCollections">
             <div class="sectionSelectionBtn">
-                <button class="sectionBtn">Sort By<i class="fas fa-arrow-down"></i></button>
+               <!-- <button class="sectionBtn" id="sort">Sort By<i class="fas fa-arrow-down"></i></button>
                 <div class="dropContent">
-                    <p>section1</p>
-                    <p>section2</p>
-                    <p>section3</p>
-                </div>
+                    <p  id="sort1"> section1</p>
+                    <p id="sort2">section2</p>
+                    <p  id="sort3">section3</p>
+                </div> -->
+
+                <select name="" id="sort">
+
+                    <option value="section1">section1</option>
+                    <option value="section2">section2</option>
+                    <option value="section3">section3</option>
+                </select>
+                
             </div>
             <div id="paintingsContainer"></div>
         </div>
 
         <!-- ........................................................Decore -->
-        <div id="decore" class="myCollections">
-            <div class="sectionSelectionBtn">
-                <button class="sectionBtn">Sort By<i class="fas fa-arrow-down"></i></button>
+         <div id="decore" class="myCollections">
+             <div class="sectionSelectionBtn">
+                 <!-- <button class="sectionBtn">Sort By<i class="fas fa-arrow-down"></i></button> 
                 <div class="dropContent">
                     <p>section1</p>
                     <p>section2</p>
                     <p>section3</p>
-                </div>
+                </div>  -->
+                <select name="" id="sortd">
+
+                    <option value="section1">section1</option>
+                    <option value="section2">section2</option>
+                    <option value="section3">section3</option>
+                </select>
             </div>
             <div id="decoreContainer"></div>
         </div>
         <!-- .........................................................Posters -->
-        <div id="posters" class="myCollections">
+         <div id="posters" class="myCollections">
             <div class="sectionSelectionBtn">
                 <button class="sectionBtn">Sort By<i class="fas fa-arrow-down"></i></button>
                 <div class="dropContent">
                     <p>section1</p>
                     <p>section2</p>
                     <p>section3</p>
-                </div>
+                </div> 
+
+               
             </div>
             <div id="PostersContainer"></div>
         </div>
@@ -92,6 +108,7 @@
 
 
     </div>
+   
     <script src="/js/gallery.js"></script>
 </body>
 
