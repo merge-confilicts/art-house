@@ -32,19 +32,19 @@ function showSlide(n) {
 }
 //................Join us form code.....................
 
-let form  = document.getElementById('joinForm');
+// let form  = document.getElementById('joinForm');
 
-form.addEventListener('click',handelClicks)
-let btn1 = document.getElementById('submitm');
-let xBtn1 = document.getElementById('xsubmit');
-btn1.addEventListener('click', handelClicks);
-xBtn1.addEventListener('click', handelClicks);
-function handelClicks(event) {
-    event.preventDefault();
-    let slideShow = document.getElementById('submitm');
-    let displaySetting = slideShow.style.display;
-    if (displaySetting == 'block') {
-        slideShow.style.display = 'none';
+// form.addEventListener('click',handelClicks)
+// let btn1 = document.getElementById('submitm');
+// let xBtn1 = document.getElementById('xsubmit');
+// btn1.addEventListener('click', handelClicks);
+// xBtn1.addEventListener('click', handelClicks);
+// function handelClicks(event) {
+//     event.preventDefault();
+//     let slideShow = document.getElementById('submitm');
+//     let displaySetting = slideShow.style.display;
+//     if (displaySetting == 'block') {
+//         slideShow.style.display = 'none';
        
-    }
-}
+//     }
+// }
