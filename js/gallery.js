@@ -347,4 +347,3 @@ function getProducts(product,price){
     localStorage.setItem('product',data);
 }
 
-

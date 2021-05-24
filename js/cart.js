@@ -25,22 +25,69 @@ function okMessage(event) {
     }
 }
 
+const table = document.getElementById('cart');
+table.addEventListener('click', removeItemFromCart);
+let cart; 
 
+const cartItems = JSON.parse(localStorage.getItem('product')) || []; 
+console.log(cartItems); 
 
-// let btn = document.getElementById('submitBtn');
-// let xBtn = document.getElementById('xButton');
-// btn.addEventListener('click', tourShow);
-// xBtn.addEventListener('click', tourShow);
-// function tourShow(event) {
+function renderCart() {
+	loadCart();
+	clearCart();
+	showCart();
+  }
+
+function loadCart() {
+	const cartItems = JSON.parse(localStorage.getItem('product')) || [];
+	let cart = new Paintings(cartItems[i]);
+  }
+
+function clearCart() {
+let tBody= table.getElementsByTagName('tbody')[0];
+
+while (tBody.firstElementChild){
+  tBody.removeChild(tBody.firstElementChild);
+}
+}
+
+function showCart() {
+	let tBody = table.getElementsByTagName('tbody')[0];
+	for (let i=0; i<productsList.length;i++){
+		
+	let tableRow = document.createElement('tr');
     
-// }
+	let deletetd= document.createElement('td');
+    deletetd.setAttribute('id',productsList[i]);
+    let button=document.createElement('p');
+    deletetd.appendChild(button);
+    button.textContent='X';
+    button.setAttribute('id',productsList[i].product);
+    button.addEventListener('click',removeItemFromCart);
+  
+    let nameProducttd= document.createElement('td');
+    nameProducttd.textContent=productsList[i];
+    
+	let itemtd= document.createElement('td');
+    itemtd.textContent=productsList[i];
 
+    tBody.appendChild(tableRow);
+    tableRow.appendChild(deletetd);
+    tableRow.appendChild(nameProducttd);
+    tableRow.appendChild(itemtd);
 
+  }
+}
 
+function removeItemFromCart(event) {
+	let removeItem= event.target.id;
+	for (let i=0; i<cart.paintings.length;i++){
+	  if (cart.paintings[i].product===removeItem){
+	  cart.removeItem (cart.paintings[i]);
+	}}
 
-// Swal.fire({
-//     title: 'Congratulation!',
-//     text: 'Your order has been placed',
-//     icon: 'success',
-//     confirmButtonText: 'OK'
-//   });
+	cart.saveToLocalStorage();
+    renderCart();
+}
+
+renderCart();
