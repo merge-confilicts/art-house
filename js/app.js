@@ -1,4 +1,6 @@
+
 'use strict';
+
 //................Tour button code.....................
 let btn = document.getElementById('button');
 let xBtn = document.getElementById('xButton');
@@ -14,7 +16,9 @@ function tourShow(event) {
         slideShow.style.display = 'block';
     }
 }
+
 //................Slide show code.....................
+
 let index = 1;
 showSlide(index);
 function plusSlides(action) {
@@ -28,6 +32,7 @@ function showSlide(n) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+
     slides[index - 1].style.display = "block";
 }
 //................Join us form code.....................
@@ -62,3 +67,4 @@ function gettingppaints(){
   }
 }
 settingpaints();
+
