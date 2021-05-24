@@ -1,16 +1,11 @@
 'use strict' 
-
-
 function appear() { 
-
-	document.getElementById("form").style.display="block"; 
+    document.getElementById("form").style.display="block"; 
 }
-
 let but = document.getElementById('submitBtn'); 
 let form = document.getElementById('Information'); 
 let popup = document.getElementById('alertMsg');
 let okBtn = document.getElementById('okButton');
-
 but.addEventListener('click', removeForm);
 function removeForm(event) {
 event.preventDefault(); 

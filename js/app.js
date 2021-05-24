@@ -6,15 +6,12 @@ let btn = document.getElementById('button');
 let xBtn = document.getElementById('xButton');
 btn.addEventListener('click', tourShow);
 xBtn.addEventListener('click', tourShow);
-
 function tourShow(event) {
     let slideShow = document.getElementById('tour');
     let displaySetting = slideShow.style.display;
-
     if (displaySetting == 'block') {
         slideShow.style.display = 'none';
         btn.innerHTML = 'tour';
-
     } else if (xBtn.addEventListener) {
         slideShow.style.display = 'block';
     }
@@ -27,7 +24,6 @@ showSlide(index);
 function plusSlides(action) {
     showSlide(index += action);
 }
-
 function showSlide(n) {
     let slides = document.getElementsByClassName('mySlide');
     console.log(slides);
@@ -46,7 +42,7 @@ function showSlide(n) {
 
 let form = document.getElementById('joinForm');
 
-form.addEventListener('click', handelClicks)
+form.addEventListener('submit', handelClicks);
 let btn1 = document.getElementById('submitm');
 let xBtn1 = document.getElementById('xsubmit');
 btn1.addEventListener('click', handelClicks);
