@@ -1,4 +1,3 @@
-
 "use strict";
 
 let collectionNumber = 0;
@@ -15,6 +14,7 @@ function showCollection(index) {
     categories[index].style.backgroundColor = "gray";
 }
 
+// ........................ Likes Button and Likes List
 let btnlike = document.getElementById('like1');
 let btnclose = document.getElementById('close');
 
@@ -38,6 +38,7 @@ function Paintings(paintName, price) { // ........Paintings Constructor
     this.paintName = paintName.split('by')[0];
     this.price = price;
     this.source = 'Images/Paints/' + paintName;
+  
     paintingsArray.push(this);
 }
 let decore = ['Ceramic vase by Job Heykamp.jpg', 'Ceramics by Job Heykamp.jpg', 'Daum by Nancy.jpg', 'dragon by Emile Galle.jpg', 'Pottery created by the Hohokam people.jpg', 'Wisteria by Emile Galle.jpg'];
@@ -55,7 +56,7 @@ let posters = ['Crater Lake Milky Way by zack.jpg','GREENE  CHECHEN ISLAND by He
 let posterPrices = ['23$','12$','56$','80$','23$','67$','63$','34$'];
 let postersArray = [];
 function Poster(posterName, price) { // ..........Posters Constructor
-    this.posterName = posterName;
+    this.posterName = posterName.split('by')[0];
     this.price = price;
     this.source = 'Images/Posters/' + posterName;
 
@@ -80,7 +81,6 @@ console.log(decoreArray);
 console.log(postersArray);
 // ............................................... Render Functions
 // ......Paintings Render
-
 let paintingsDiv = document.getElementById('paintingsContainer');
 let products = [];
 function renderPaintings() {
@@ -89,85 +89,77 @@ function renderPaintings() {
         paintingsDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${paintingsArray[i].source}`);
 
+        imgEL.setAttribute('title',`../${paintingsArray[i].paintName}`);
+
+        // Adding like and cart buttons
         let likebtnEl = document.createElement('button');
         paintingsDiv.appendChild(likebtnEl);
         likebtnEl.textContent = 'likes';
+        likebtnEl.setAttribute('onclick',`getLikes('${paintingsArray[i].paintName}')`);
 
         let cartbtnEl = document.createElement('button');
         paintingsDiv.appendChild(cartbtnEl);
-
-        // let iEl = document.createElement('i');
-        // iEl.setAttribute('class','fas fa-cart-plus');
-        // cartbtnEl.appendChild(iEl);
-
         cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
-
-        likebtnEl.addEventListener('click', saveThelikes);
-
-        cartbtnEl.addEventListener('click', saveTheProducts);
-
-    }
-
-}
-
-function saveThelikes() {
-    for (let index = 0; index < paintingsArray.length; index++) {
-        let save = paintingsArray[index].paintName;
-        switch (products) {
-            case 'like':
-                products.push(save);
-                break;
-        }
-
+    cartbtnEl.setAttribute('onclick',`getProducts('${paintingsArray[i].paintName}','${paintingsArray[i].price}')`);
     }
 }
-saveThelikes();
-
-function saveTheProducts() {
-    for (let index = 0; index < paintingsArray.length; index++) {
-        let save = paintingsArray[index].paintName;
-        switch (products) {
-            case 'add':
-                products.push(save);
-                break;
-        }
-    }
-}
-saveTheProducts();
-
-console.log(products);
-
 renderPaintings();
+  
 // ......Decore Render
 function renderDecore() {
-    let paintingsDiv = document.getElementById('decoreContainer');
+    let decoreDiv = document.getElementById('decoreContainer');
     for (let i = 0; i < decoreArray.length; i++) {
         let imgEL = document.createElement('img');
-        paintingsDiv.appendChild(imgEL);
+        decoreDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${decoreArray[i].source}`);
-        imgEL.setAttribute('title', `${paintingsArray[i].paintName}`);
+        imgEL.setAttribute('title',`${decoreArray[i].decoreName}`);
 
+        // Adding like and cart buttons
+        let likebtnEl = document.createElement('button');
+        decoreDiv.appendChild(likebtnEl);
+        likebtnEl.textContent = 'likes';
+        likebtnEl.setAttribute('onclick',`getLikes('${decoreArray[i].decoreName}')`);
 
+        let cartbtnEl = document.createElement('button');
+        decoreDiv.appendChild(cartbtnEl);
+        cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
+        cartbtnEl.setAttribute('onclick',`getProducts('${decoreArray[i].decoreName}','${decoreArray[i].price}')`);
     }
 }
 renderDecore();
 // ......Posters Render
 function renderPosters() {
-    let paintingsDiv = document.getElementById('PostersContainer');
+    let postersDiv = document.getElementById('PostersContainer');
     for (let i = 0; i < postersArray.length; i++) {
         let imgEL = document.createElement('img');
-        paintingsDiv.appendChild(imgEL);
+        postersDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${postersArray[i].source}`);
+        imgEL.setAttribute('title', `../${postersArray[i].paintName}`);
+
+        // Adding like and cart buttons
+        let likebtnEl = document.createElement('button');
+        postersDiv.appendChild(likebtnEl);
+        likebtnEl.textContent = 'likes';
+        likebtnEl.setAttribute('onclick',`getLikes('${postersArray[i].posterName}')`);
+
+        let cartbtnEl = document.createElement('button');
+        postersDiv.appendChild(cartbtnEl);
+        cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
+        cartbtnEl.setAttribute('onclick',`getProducts('${postersArray[i].posterName}','${postersArray[i].price}')`);
     }
 }
 renderPosters();
 
-// ............................................... Adding Event Listners
 
-function saveToLocalStorage() {
-    let data = JSON.stringify(products);
-    localStorage.setItem('product', data);
+// ............................................... Adding Likes and Products to List and Local storage
+let likesList = [];
+let productsList = [];
+function getLikes(like) {
+    likesList.push(like);
+    console.log(likesList);
 }
-
-
-// ............................................... Adding Event Listners
+function getProducts(product,price){
+    productsList.push(product,price);
+    let data = JSON.stringify(productsList);
+    localStorage.setItem('product',data);
+}
