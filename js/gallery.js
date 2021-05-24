@@ -51,8 +51,8 @@ function Decore(decoreName, price) { // ..........Decore Constructor
     decoreArray.push(this);
 }
 
-let posters = ['Crater Lake Milky Way by zack.jpg','GREENE  CHECHEN ISLAND by Heun Jung.jpg','joshua tree by natalie.jpg','New Zealand lake by  Jess Santos.jpg','OLGA KRAVETS  BALIKESIR TREE by  NOOR.jpg','PEP BONET by Daniel Skwarna.jpg','SEBASTIAN LISTE by Justin Mott.jpg','utah mountains by edward.jpg'];
-let posterPrices = ['23$','12$','56$','80$','23$','67$','63$','34$'];
+let posters = ['Crater Lake Milky Way by zack.jpg', 'GREENE  CHECHEN ISLAND by Heun Jung.jpg', 'joshua tree by natalie.jpg', 'New Zealand lake by  Jess Santos.jpg', 'OLGA KRAVETS  BALIKESIR TREE by  NOOR.jpg', 'PEP BONET by Daniel Skwarna.jpg', 'SEBASTIAN LISTE by Justin Mott.jpg', 'utah mountains by edward.jpg'];
+let posterPrices = ['23$', '12$', '56$', '80$', '23$', '67$', '63$', '34$'];
 let postersArray = [];
 function Poster(posterName, price) { // ..........Posters Constructor
     this.posterName = posterName;
@@ -78,11 +78,10 @@ creatProducts();
 console.log(paintingsArray);
 console.log(decoreArray);
 console.log(postersArray);
-// ............................................... Render Functions
+// ....................................................... Render Functions
 // ......Paintings Render
 
 let paintingsDiv = document.getElementById('paintingsContainer');
-let products = [];
 function renderPaintings() {
     for (let i = 0; i < paintingsArray.length; i++) {
         let imgEL = document.createElement('img');
@@ -95,50 +94,56 @@ function renderPaintings() {
 
         let cartbtnEl = document.createElement('button');
         paintingsDiv.appendChild(cartbtnEl);
-
-        // let iEl = document.createElement('i');
-        // iEl.setAttribute('class','fas fa-cart-plus');
-        // cartbtnEl.appendChild(iEl);
-
         cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
-
-        likebtnEl.addEventListener('click', saveThelikes);
-
-        cartbtnEl.addEventListener('click', saveTheProducts);
-
-    }
-
-}
-
-function saveThelikes() {
-    for (let index = 0; index < paintingsArray.length; index++) {
-        let save = paintingsArray[index].paintName;
-        switch (products) {
-            case 'like':
-                products.push(save);
-                break;
-        }
-
+        // ...... Adding event listners
+        likebtnEl.addEventListener('click', getLikes());
+        cartbtnEl.addEventListener('click', getProducts());
     }
 }
-saveThelikes();
+let likesList = []
+let productsList = [];
+function getLikes(event) {
+    if (event !== null) {
+        // let like = event.target.class;
+        // likesList.push(like);
 
-function saveTheProducts() {
-    for (let index = 0; index < paintingsArray.length; index++) {
-        let save = paintingsArray[index].paintName;
-        switch (products) {
-            case 'add':
-                products.push(save);
-                break;
-        }
+        // setting likes to local storage
+        let data = JSON.stringify(likesList);
+        localStorage.setItem('like',data1);
     }
 }
-saveTheProducts();
+function getProducts(event){
 
-console.log(products);
+}
+// function saveThelikes() {
+//     for (let index = 0; index < paintingsArray.length; index++) {
+//         let save = paintingsArray[index].paintName;
+//         switch (products) {
+//             case 'like':
+//                 products.push(save);
+//                 break;
+//         }
+
+//     }
+// }
+// saveThelikes();
+
+// function saveTheProducts() {
+//     for (let index = 0; index < paintingsArray.length; index++) {
+//         let save = paintingsArray[index].paintName;
+//         switch (products) {
+//             case 'add':
+//                 products.push(save);
+//                 break;
+//         }
+//     }
+// }
+// saveTheProducts();
+
+console.log(likesList);
 
 renderPaintings();
-// ......Decore Render
+// ..........................Decore Render
 function renderDecore() {
     let paintingsDiv = document.getElementById('decoreContainer');
     for (let i = 0; i < decoreArray.length; i++) {
@@ -151,7 +156,7 @@ function renderDecore() {
     }
 }
 renderDecore();
-// ......Posters Render
+// ..........................Posters Render
 function renderPosters() {
     let paintingsDiv = document.getElementById('PostersContainer');
     for (let i = 0; i < postersArray.length; i++) {
