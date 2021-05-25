@@ -107,14 +107,6 @@ function renderPosters() {
 renderPosters();
 // ............................................... Adding Likes and Products to List and Local storage
 let likesList = [];
-function gettingLikes() {
-    let stringlikes = localStorage.getItem('paintsImg')
-    let normalLikes = JSON.parse(stringLikes);
-    if (normalLikes !== null) {
-        likesList = normalLikes;
-        return normalLikes;
-    }
-}
 let productsList = [];
 let prices =[];
 function getProducts(product, price) {
@@ -129,21 +121,33 @@ function getProducts(product, price) {
 function getLikes(like) {
     likesList.push(like);
     console.log(likesList);
+    localStorage.setItem('like',JSON.stringify(likesList));
+    renderLikes();
 }
 
 function renderLikes() {
     if (likesList !== null) {
         for (let i = 0; i < likesList.length; i++) {
+            let divEl = document.getElementById('sidebar');
             let div1EL = document.createElement('div');
             divEl.appendChild(div1EL);
-            let stringLikes = localStorage.getItem('paintsImg')
-            let normalLikes = JSON.parse(stringLikes);
-            console.log(normalLikes);
-            div1EL.textContent = normalLikes;
+            // let normalLikes = JSON.parse(stringLikes);
+            // console.log(normalLikes);
+            div1EL.textContent = likesList[i];
         }
     }
 }
+
+function gettingLikes() {
+    let stringlikes = localStorage.getItem('like');
+    let normalLikes = JSON.parse(stringlikes);
+    if (normalLikes !== null) {
+        likesList = normalLikes;
+    }
+}
+gettingLikes();
 renderLikes();
+
 let collectionNumber = 0;
 showCollection(collectionNumber);
 function showCollection(index) {
