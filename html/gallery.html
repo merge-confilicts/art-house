@@ -13,15 +13,19 @@
 </head>
 
 <body>
-    <!-- The Nav Bar -->
+    <div id="alertMessage">
+        <p>This Image is alredy in your Like List</p>
+        <button id="closeMessage">Ok</button>
+    </div>
 
+    <!-- The Nav Bar -->
     <head>
         <nav>
             <ul>
                 <li><a href="index.html">Art House</a></li>
                 <li><a href="#">Gallary</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
-                <li><a href="shopping-page.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="shopping-page.html"><i class="fas fa-shopping-cart"></i><span id="numberOFitems"></span></a></li>
             </ul>
         </nav>
         <div id="frontDiv">
@@ -121,6 +125,7 @@
 
 <div id="sidebar">
 <button id="close">close</button>
+<table id="sideBarItems"></table>
     </div>
     <script src="/js/gallery.js"></script>
 </body>

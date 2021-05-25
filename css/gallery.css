@@ -11,7 +11,7 @@ ul li a{display: inline-block;padding-top: 13px;text-align: center;width: 80px;h
 nav ul li a:hover{background-color: lightgray;}
 
 
-/*............ first backgroun Image */
+/*............ first background Image */
 #firstPage{width: 100%;height: 400px;}
 #frontDiv h1{text-align: center;margin-top: -200px;margin-bottom: 170px;font-size: 60px;}
 
@@ -36,21 +36,18 @@ main img{width: 250px;height: 250px;margin: 10px;transition: 0.8s;}
 .inlineImages{display: inline-block;transition: 0.8s;}
 .inlineImages button{position: relative;top: -30px;left: -120px;}
 
-/* ......................Decore Div */
-/* #decore{}
+/* ................................................................ Footer */
+footer{width: 100%;height: 200px;background-color: lightgray;text-align: center;padding-top: 100px;}
+footer span{padding-right: 30px;}
+footer i{color: black;}
 
-/* ......................Posters Div */
-/* #posters{}  */
-
-
-/*Likes side bar */
-
+/*.....................Likes side bar */
 #like1{
     width: 100px;
     height: 40px;
-    /* position: fixed; */
-    top: 600px;
-    right:40px;
+    position: fixed;
+    top: 500px;
+    right:80px;
     border-radius: 10px;
     /* bottom: 30px; */
     /* margin-bottom: 50px; */
@@ -59,12 +56,9 @@ main img{width: 250px;height: 250px;margin: 10px;transition: 0.8s;}
     color: black;
     padding: 5px 10px 5px 10px;
     font-size: 20px;
-    font-family: cursive;
+    cursor: pointer;
 }
-#like1:hover{
-    background-color: black;
-    color: white;
-}
+
 #sidebar{
 width: 0;
 height: 100%;
@@ -75,6 +69,19 @@ top: 0;
 right:  0;
 display: inline-block;
 }
+
+#alertMessage{width: 0px; height: 20%;position: fixed;top: 200px;left: 0;background-color: gray;
+    transition: 0.8s;}
+
+#sidebar{width: 0;height: 100%;transition: 0.5s;background-color: white;overflow-x: hidden;
+    z-index: 1;position: fixed;top: 0;right:  0;display: inline-block;}
+
+#sideBarItems th{color: brown; padding-left: 30px;padding-right: 30px;}
+#sideBarItems tr{color: coral;}
+#sideBarItems td{padding: 7px;}
+#sideBarItems tr td:first-child{padding-left: 30px;}
+#sideBarItems tr td:last-child{cursor: pointer;}
+
 #sidebar a{
     text-align: left;
     font-size: 30px;
@@ -98,11 +105,5 @@ display: inline-block;
      */
     color:black;
 }
-
-ng
-/* ................................................................ Footer */
-footer{width: 100%;height: 200px;background-color: lightgray;text-align: center;padding-top: 100px;}
-footer span{padding-right: 30px;}
-footer i{color: black;}
 
 
