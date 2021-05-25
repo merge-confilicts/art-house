@@ -1,5 +1,36 @@
 "use strict";
 
+let likesList = [];
+let collectionNumber = 0;
+showCollection(collectionNumber);
+
+function showCollection(index) {
+    let myCollections = document.getElementsByClassName("myCollections");
+    let categories = document.getElementsByClassName("categoryBtn");
+    for (let i = 0; i < myCollections.length; i++) {
+        myCollections[i].style.display = "none";
+        categories[i].style.backgroundColor = "white";
+    }
+    myCollections[index].style.display = "block";
+    categories[index].style.backgroundColor = "gray";
+}
+
+// ........................ Likes Button and Likes List
+let btnlike = document.getElementById('like1');
+let btnclose = document.getElementById('close');
+
+btnlike.addEventListener('click', opensidebar);
+btnclose.addEventListener('click', closeSideBar);
+function opensidebar(event) {
+    document.getElementById("sidebar").style.width = "200px";
+    document.getElementById("sidebar").style.display = "block";
+}
+
+function closeSideBar() {
+    document.getElementById("sidebar").style.width = "0px";
+}
+
+
 // .............................................. Creating Constructors
 let paints = ["Bow by Clare Grill.jpg", "Composition X by Wassily Kandinsky.jpg", "cubism still life painting by Anis.jpg", "skyline city by Joun doe.jpg", "Still Life Tazza by jacob.jpg", "whatever by khalid.jpg"];
 let paitsPrices = ['15$', '20$', '7$', '75$', '30$', '175$'];
@@ -65,7 +96,62 @@ function renderPaintings() {
         let cartbtnEl = document.createElement('button');
         paintingsDiv.appendChild(cartbtnEl);
         cartbtnEl.innerHTML = '<i class="fas fa-cart-plus"></i>';
-        cartbtnEl.setAttribute('onclick', `getProducts('${paintingsArray[i].paintName}','${paintingsArray[i].price}')`);
+
+        cartbtnEl.setAttribute('onclick', `getProducts('${paintingsArray[i].paintName}','${paintingsArray[i].paitsPrices}'`);
+    }
+}
+
+
+
+// function settingpaints(){
+//     let data = JSON.stringify(likesList);
+//     localStorage.setItem('paintsImg',data);
+// }
+
+function gettingLikes() {
+    let stringlikes = localStorage.getItem('paintsImg')
+    let normalLikes = JSON.parse(stringLikes);
+    if (normalLikes !== null) {
+        likesList = normalLikes;
+        return normalLikes;
+    }
+}
+
+// settingpaints();
+let divEl = document.getElementById('sidebar');
+
+function getLikes(like) {
+    
+    likesList.push(like);
+    console.log(likesList);
+    let data = JSON.stringify(likesList);
+    localStorage.setItem('like', data);
+    renderLikes();
+}
+
+getLikes();
+
+
+function renderLikes() {
+
+    if (likesList !== null) {
+        
+        for (let i = 0; i < likesList.length; i++) {
+
+            let div1EL = document.createElement('div');
+            divEl.appendChild(div1EL);
+
+            let stringLikes = localStorage.getItem('paintsImg')
+            let normalLikes = JSON.parse(stringLikes);
+            console.log(normalLikes);
+
+            div1EL.textContent = normalLikes;
+
+        }
+
+        
+
+      
     }
 }
 renderPaintings();
@@ -214,3 +300,6 @@ function sortselection1(event) {
         renderPaintings([paintingsArray[4], paintingsArray[5]]);
     }
 }
+
+}
+
