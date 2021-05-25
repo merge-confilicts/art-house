@@ -144,7 +144,10 @@ function getLikes(like, type) {
         let message = document.getElementById('alertMessage');
         message.style.width = '500px';
         let closeMessageBtn = document.getElementById('closeMessage');
-        closeMessageBtn.addEventListener('click',message.style.width = '0px')
+        closeMessageBtn.addEventListener('click', closeSideMessage);
+        function closeSideMessage() {
+            message.style.width = '0px';
+        }
     }
 }
 
@@ -197,10 +200,10 @@ function removeFromList(event) {
     for (let i = 0; i < likesList.length; i++) {
         divEl.innerHTML = '';
         likesList.splice(index, 1);
-        typeslist.splice(index,1);
+        typeslist.splice(index, 1);
         renderLikes();
-        localStorage.setItem('like',JSON.stringify(likesList));
-        localStorage.setItem('type',JSON.stringify(typeslist));
+        localStorage.setItem('like', JSON.stringify(likesList));
+        localStorage.setItem('type', JSON.stringify(typeslist));
     }
 }
 
@@ -241,27 +244,6 @@ function opensidebar(event) {
 }
 function closeSideBar() {
     document.getElementById("sidebar").style.width = "0px";
-}
-
-//sortbyy
-let selection1 = document.getElementById("sort");
-selection1.addEventListener('change', sortselection1)
-function sortselection1(event) {
-    /* for (let i = 0; i < paintingsArray.length; i++) {
-         paintingsArray.sort();
-     console.log(paintingsArray);
-    }*/
-    console.log(selection1.value);
-    if (selection1.value == "section1") {
-        paintingsDiv.innerHTML = ""
-        renderPaintings([paintingsArray[0], paintingsArray[1]]);
-    } else if (selection1.value == "section2") {
-        paintingsDiv.innerHTML = ""
-        renderPaintings([paintingsArray[2], paintingsArray[3]]);
-    } else if (selection1.value == "section3") {
-        paintingsDiv.innerHTML = ""
-        renderPaintings([paintingsArray[4], paintingsArray[5]]);
-    }
 }
 
 // ... End 
