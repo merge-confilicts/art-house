@@ -29,6 +29,11 @@ function okMessage(event) {
     }
 
 
+const cartProduct = JSON.parse(localStorage.getItem('product')) || []; 
+console.log(cartProduct); 
+const cartPrice = JSON.parse(localStorage.getItem('price')) || [];
+console.log(cartPrice); 
+
 
 let table = document.getElementById('cart');
 let tBody= table.getElementsByTagName('tbody')[0];
@@ -44,9 +49,17 @@ function getLocalStorage(){
 }
 
 function renderCart() {
+
 	clearCart();
 	showCart();
   }
+
+
+// function loadCart() {
+//   new cartProduct(paints[i], cartPrice[i]);
+//   }
+// console.log(cartItems);
+
 
 function clearCart() {
 
@@ -66,7 +79,11 @@ function showCart() {
     let button=document.createElement('p');
     deletetd.appendChild(button);
     button.textContent='X';
+
     button.setAttribute('id',i);
+
+   
+
     button.addEventListener('click',removeItemFromCart);
   
     let nameProducttd= document.createElement('td');
@@ -84,12 +101,14 @@ function showCart() {
 
 function removeItemFromCart(event) {
 	let removeItem= event.target.id;
+
   let removeArray = []; 
 	let removeArray2 = []; 
 for (let i=0; i<cartProduct.length; i++){
 if (i !== Number(removeItem)){
 removeArray.push(cartProduct[i]); 
 removeArray2.push(cartPrice[i]); 
+
 }
 }
 cartProduct = removeArray; 

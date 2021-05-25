@@ -36,3 +36,4 @@ function showSlide(n) {
     slides[index - 1].style.display = "block";
 }
 
+

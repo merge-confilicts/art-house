@@ -88,13 +88,6 @@ header ul li {
 }
 
 
-header nav ul div{
-    display: inline-block;
-    margin-left:900px;
-    margin-bottom:20px;
-    word-spacing: 50px;   
-       
-}
 
 #mainimg{
     position: absolute;
@@ -114,6 +107,7 @@ nav h1{
     font-size: 40px;
     color: #B69B77;
     
+
 
  p {
      text-align: center;
@@ -140,14 +134,35 @@ nav h1{
      float: left;
  }
 
- body {
-     font-family: Arial, Helvetica, sans-serif;
- }
+ 
+
+
+
 
  
 
+
  header {
      border: black;
+ }
+
+
+ header nav ul li {
+     display: inline-block;
+ }
+
+ header nav {
+     display: inline-block;
+     margin-top: 2px;
+     background-color: rgb(151, 148, 148);
+     width: 100%;
+ }
+
+ header nav ul div {
+     display: inline-block;
+     margin-left: 900px;
+     margin-bottom: 20px;
+     word-spacing: 25px;
  }
 
  
@@ -160,6 +175,60 @@ nav h1{
      font-size: 40px;
      /*background-color: rgb(156, 167, 187);
     height: 100%;*/
+
+ }
+
+ h2 {
+     font-family: cursive;
+ }
+
+ ul li a {
+     text-decoration: none;
+     font-family: cursive;
+     color: black;
+     margin-bottom: 20px;
+ }
+
+ p {
+     font-family: cursive;
+ }
+
+ h3 {
+     font-family: cursive;
+ }
+
+ article section {
+     display: inline-block;
+ }
+
+ .left {
+     padding-top: 50px;
+ }
+
+ #phone {
+     margin-right: 50px;
+ }
+
+ .right {
+     top: 180px;
+     left: 600px;
+     /* padding-left: 70%;*/
+     padding-bottom: 30%;
+     margin-bottom: 100px;
+     width: 40%;
+     height: 50%;
+     /* margin-top: -300px;*/
+     position: absolute;
+     /* width: 150px;*/
+     /*height: 50%;*/
+ }
+
+ section div h2 {
+     padding-left: 1%;
+ }
+
+ /*
+
 
 
 }
@@ -289,12 +358,16 @@ section div h2{
 /*
 
  
+
 section div form fieldset p{
     padding-left: 50px;
 }
 */
 
+
  
+ 
+
  /*
 #joinForm{
    width: 80%;
@@ -510,6 +583,16 @@ footer .fa-pinterest{
 }
 
 
+
+
+
+/*
+nav{width: 100%;height: 40px;background-color: gray;text-align: right;font-size: 20px;position: fixed;}
+ul li{display: inline-block;}
+nav ul li:first-child{float: left;}
+ul li a{display: inline-block;padding-top: 13px;text-align: center;width: 80px;height: 40px;
+    text-decoration: none;color: white;font-size: 15px;}
+nav ul li a:hover{background-color: lightgray;}*/
 
 
 
