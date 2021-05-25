@@ -131,6 +131,12 @@ function getLikes(like) {
     console.log(likesList);
 }
 
+function getProducts(product,price){
+    productsList.push(product,price);
+    let data = JSON.stringify(productsList);
+    localStorage.setItem('product',data); } }
+
+
 function renderLikes() {
     if (likesList !== null) {
         for (let i = 0; i < likesList.length; i++) {
@@ -188,3 +194,4 @@ function sortselection1(event) {
         renderPaintings([paintingsArray[4], paintingsArray[5]]);
     }
 }
+
