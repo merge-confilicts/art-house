@@ -1,10 +1,8 @@
 "use strict";
 
-
 // .............................................. Creating Constructors
 let paints = ["Bow by Clare Grill.jpg", "Composition X by Wassily Kandinsky.jpg", "cubism still life painting by Anis.jpg", "skyline city by Joun doe.jpg", "Still Life Tazza by jacob.jpg", "whatever by khalid.jpg"];
 let paitsPrices = ['15$', '20$', '7$', '75$', '30$', '175$'];
-
 let paintingsArray = [];
 function Paintings(paintName, price) { // ........Paintings Constructor
     this.paintName = paintName.split('by')[0];
@@ -20,10 +18,8 @@ function Decore(decoreName, price) { // ..........Decore Constructor
     this.decoreName = decoreName.split('by')[0];
     this.price = price;
     this.source = 'Images/Decore/' + decoreName;
-
     decoreArray.push(this);
 }
-
 let posters = ['Crater Lake Milky Way by zack.jpg', 'GREENE  CHECHEN ISLAND by Heun Jung.jpg', 'joshua tree by natalie.jpg', 'New Zealand lake by  Jess Santos.jpg', 'OLGA KRAVETS  BALIKESIR TREE by  NOOR.jpg', 'PEP BONET by Daniel Skwarna.jpg', 'SEBASTIAN LISTE by Justin Mott.jpg', 'utah mountains by edward.jpg'];
 let posterPrices = ['23$', '12$', '56$', '80$', '23$', '67$', '63$', '34$'];
 let postersArray = [];
@@ -31,10 +27,8 @@ function Poster(posterName, price) { // ..........Posters Constructor
     this.posterName = posterName.split('by')[0];
     this.price = price;
     this.source = 'Images/Posters/' + posterName;
-
     postersArray.push(this);
 }
-
 // ............................................... Creating Objects
 function creatProducts() {
     for (let i = 0; i < paints.length; i++) {
@@ -62,7 +56,6 @@ function renderPaintings() {
         imgEL.setAttribute('src', `../${paintingsArray[i].source}`);
 
         imgEL.setAttribute('title', `../${paintingsArray[i].paintName}`);
-
         // Adding like and cart buttons
         let likebtnEl = document.createElement('button');
         paintingsDiv.appendChild(likebtnEl);
@@ -107,7 +100,6 @@ function renderPosters() {
         postersDiv.appendChild(imgEL);
         imgEL.setAttribute('src', `../${postersArray[i].source}`);
         imgEL.setAttribute('title', `../${postersArray[i].paintName}`);
-
         // Adding like and cart buttons
         let likebtnEl = document.createElement('button');
         postersDiv.appendChild(likebtnEl);
@@ -123,48 +115,56 @@ function renderPosters() {
 renderPosters();
 
 
-// ............................................... Adding Likes and Products to List and Local storage
-let likesList = [];
-let productsList = [];
-function gettingLikes() {
-    let stringlikes = localStorage.getItem('paintsImg')
-    let normalLikes = JSON.parse(stringLikes);
-    if (normalLikes !== null) {
-        likesList = normalLikes;
-        return normalLikes;
-    }
-
-}
-function getLikes(like) {
-    likesList.push(like);
-    console.log(likesList);
-}
 function getProducts(product, price) {
     productsList.push(product, price);
     let data = JSON.stringify(productsList);
     localStorage.setItem('product', data);
 }
 
+
+
+// ............................................... Adding Likes and Products to List and Local storage
+let likesList = [];
+let productsList = [];
+let prices =[];
+function getProducts(product, price) {
+    productsList.push(product);
+    prices.push(price);
+    let data = JSON.stringify(productsList);
+    localStorage.setItem('product', data);
+    let data2 = JSON.stringify(prices);
+    localStorage.setItem('price', data2);
+}
+
+function getLikes(like) {
+    likesList.push(like);
+    console.log(likesList);
+    localStorage.setItem('like',JSON.stringify(likesList));
+    renderLikes();
+}
+
 function renderLikes() {
-
     if (likesList !== null) {
-
         for (let i = 0; i < likesList.length; i++) {
-
+            let divEl = document.getElementById('sidebar');
             let div1EL = document.createElement('div');
             divEl.appendChild(div1EL);
-
-            let stringLikes = localStorage.getItem('paintsImg')
-            let normalLikes = JSON.parse(stringLikes);
-            console.log(normalLikes);
-
-            div1EL.textContent = normalLikes;
-
+            // let normalLikes = JSON.parse(stringLikes);
+            // console.log(normalLikes);
+            div1EL.textContent = likesList[i];
         }
-
-
     }
 }
+
+function gettingLikes() {
+    let stringlikes = localStorage.getItem('like');
+    let normalLikes = JSON.parse(stringlikes);
+    if (normalLikes !== null) {
+        likesList = normalLikes;
+    }
+}
+gettingLikes();
+
 renderLikes();
 
 let collectionNumber = 0;
@@ -184,7 +184,6 @@ function showCollection(index) {
 // ........................ Likes Button and Likes List
 let btnlike = document.getElementById('like1');
 let btnclose = document.getElementById('close');
-
 btnlike.addEventListener('click', opensidebar);
 btnclose.addEventListener('click', closeSideBar);
 function opensidebar(event) {
@@ -195,35 +194,23 @@ function opensidebar(event) {
 function closeSideBar() {
     document.getElementById("sidebar").style.width = "0px";
 }
-
 //sortbyy
 let selection1 = document.getElementById("sort");
-
-
 selection1.addEventListener('change', sortselection1)
-
 function sortselection1(event) {
     /* for (let i = 0; i < paintingsArray.length; i++) {
-         
          paintingsArray.sort();
-         
      console.log(paintingsArray);
     }*/
-
     console.log(selection1.value);
     if (selection1.value == "section1") {
-
         paintingsDiv.innerHTML = ""
         renderPaintings([paintingsArray[0], paintingsArray[1]]);
-
     } else if (selection1.value == "section2") {
         paintingsDiv.innerHTML = ""
         renderPaintings([paintingsArray[2], paintingsArray[3]]);
-
     } else if (selection1.value == "section3") {
         paintingsDiv.innerHTML = ""
         renderPaintings([paintingsArray[4], paintingsArray[5]]);
-
-
     }
 }
