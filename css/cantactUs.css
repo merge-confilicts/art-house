@@ -1,161 +1,129 @@
- 
-p{
+ p {
+     text-align: center;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bold;
+     font-size: 20px;
+     float: left;
+     margin-left: 400px;
+ }
 
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 20px;
-    float: left;
-    margin-left:400px;}
-    #teamm{
-        text-align: center;
-        margin-left:-200px ;
-        padding-top: 20px;
-        
-    }
+ #teamm {
+     text-align: center;
+     margin-left: -200px;
+     padding-top: 20px;
+ }
 
-#social{
-    float:right;
-    
-    margin-right:  150px  ;
-    
+ #social {
+     float: right;
+     margin-right: 150px;
+ }
 
-}
-#social img{
+ #social img {
+     width: 50%;
+     float: left;
+ }
 
-   width: 50%;
-   
-    float: left;
-    
-}
-#h11{
-  text-align: left;
-}
-#h22{
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+ }
 
-    text-align: left;
-}
-#h33{
-    text-align: left;  
-}
+ * {
+     box-sizing: border-box;
+ }
 
-#h44{
-    text-align: left;
-}
-#h55{
-    text-align: left;
-}
-#h66{
-    text-align: left;
-}
+ header {
+     border: black;
+ }
 
+ header nav ul li {
+     display: inline-block;
+ }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+ header nav {
+     display: inline-block;
+     margin-top: 2px;
+     background-color: rgb(151, 148, 148);
+     width: 100%;
+ }
 
-header{
-    border: black;
-}
+ header nav ul div {
+     display: inline-block;
+     margin-left: 900px;
+     margin-bottom: 20px;
+     word-spacing: 25px;
+ }
 
-header nav ul li{
-    display: inline-block;
-   
-}
-
-header nav{
-    display: inline-block;
-    margin-top: 5px;
-    background-color: rgb(151, 148, 148);
-    width: 100%;
-    background-image: url("https://www.unnatiunlimited.com/wp-content/uploads/2018/01/Shayona-Banner-Page-Banner-Contact-us.jpg");
-    /* height:30%; */
-    /* color: blanchedalmond; */
-}
-/* header nav ul{
-    background-image: url("https://media.secventia.se/2016/04/contact-us-Banner.png");
-} */
-header nav ul div{
-    display: inline-block;
-    margin-left:900px;
-    margin-bottom:20px;
-    word-spacing: 25px;
-    /* color: white; */
-    
-}
-.divv{
-    display: inline-block;
-    margin-left: 100px;
-    margin-top: 800px;
-}
-nav h1{
-    text-align:center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 40px;
-    /*background-color: rgb(156, 167, 187);
+ nav h1 {
+     text-align: center;
+     font-size: 40px;
+     /*background-color: rgb(156, 167, 187);
     height: 100%;*/
-}
+ }
 
-h2{
-    font-family: cursive;
-}
-ul li a {
-    text-decoration: none;
-    font-family: cursive;
-    color: black;
-    margin-bottom: 20px;
-}
-p{
-    font-family: cursive;
-}
-h3{
-    font-family: cursive;
-}
-article section{
-    display: inline-block;
-    
-}
-.left{
-    
-    padding-top:50px ;
-    
-}
+ h2 {
+     font-family: cursive;
+ }
 
-#phone{
-    margin-right:50px;
-}
+ ul li a {
+     text-decoration: none;
+     font-family: cursive;
+     color: black;
+     margin-bottom: 20px;
+ }
 
+ p {
+     font-family: cursive;
+ }
 
-.right{
-   top:200px;
-   left:600px;
-  /* padding-left: 70%;*/
-   padding-bottom:30% ;
-   margin-bottom: 100px;
-   width: 40%;
-   height:50% ;
-    /* margin-top: -300px;*/
-    position: absolute;
-    /* width: 150px;*/
-   /*height: 50%;*/
-   
-}
-section div h2{
-    padding-left:1%;
-}
-/*
+ h3 {
+     font-family: cursive;
+ }
+
+ article section {
+     display: inline-block;
+ }
+
+ .left {
+     padding-top: 50px;
+ }
+
+ #phone {
+     margin-right: 50px;
+ }
+
+ .right {
+     top: 180px;
+     left: 600px;
+     /* padding-left: 70%;*/
+     padding-bottom: 30%;
+     margin-bottom: 100px;
+     width: 40%;
+     height: 50%;
+     /* margin-top: -300px;*/
+     position: absolute;
+     /* width: 150px;*/
+     /*height: 50%;*/
+ }
+
+ section div h2 {
+     padding-left: 1%;
+ }
+
+ /*
 section div form fieldset p{
     padding-left: 50px;
 }
 */
-form {
-   width: 100%;
-   height: 70%;
- /*  padding-left: 100px;*/
-   background-color: #f8fcf8;
-   margin: 15px;
-   
-}
-/*
+
+ form {
+     width: 100%;
+     height: 70%;
+     /*  padding-left: 100px;*/
+     background-color: #f8fcf8;
+     margin: 15px;
+ }
+
+ /*
 #joinForm{
    width: 80%;
    height: 80%;
@@ -163,18 +131,20 @@ form {
 }*/
 
  /* input[type=text] { */
-    form .input{
-    width: 100%;
-    /* padding: 15px; */
-    /*margin: 5px, 0, 22px ,0;*/
-    /* padding-top: 20px;
+
+ form .input {
+     width: 100%;
+     /* padding: 15px; */
+     /*margin: 5px, 0, 22px ,0;*/
+     /* padding-top: 20px;
     padding-bottom: 15px; */
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-    padding-top: 20px;
-    border-style: inset;
-} 
+     display: inline-block;
+     border: none;
+     background: #f1f1f1;
+     padding-top: 20px;
+     border-style: inset;
+ }
+
  /* form fieldset input{
     padding-top: 20px;
     margin-top: 10px;
@@ -280,4 +250,3 @@ nav ul li:first-child{float: left;}
 ul li a{display: inline-block;padding-top: 13px;text-align: center;width: 80px;height: 40px;
     text-decoration: none;color: white;font-size: 15px;}
 nav ul li a:hover{background-color: lightgray;}*/
-
