@@ -125,12 +125,6 @@ function getLikes(like) {
     renderLikes();
 }
 
-function getProducts(product,price){
-    productsList.push(product,price);
-    let data = JSON.stringify(productsList);
-    localStorage.setItem('product',data); } }
-
-
 function renderLikes() {
     if (likesList !== null) {
         for (let i = 0; i < likesList.length; i++) {
