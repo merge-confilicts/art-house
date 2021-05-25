@@ -68,7 +68,3 @@ function gettingppaints(){
 }
 settingpaints();
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 500d1f50bad1e23df862bbcc8775932067aaa2bc

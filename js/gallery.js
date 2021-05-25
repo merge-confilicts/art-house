@@ -344,6 +344,4 @@ function getLikes(like) {
 function getProducts(product,price){
     productsList.push(product,price);
     let data = JSON.stringify(productsList);
-    localStorage.setItem('product',data);
-}
-
+    localStorage.setItem('product',data); } }
