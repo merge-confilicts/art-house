@@ -11,7 +11,7 @@ function tourShow(event) {
     let displaySetting = slideShow.style.display;
     if (displaySetting == 'block') {
         slideShow.style.display = 'none';
-        btn.innerHTML = 'tour';
+        // btn.innerHTML = 'Tour';
     } else if (xBtn.addEventListener) {
         slideShow.style.display = 'block';
     }
