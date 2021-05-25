@@ -1,5 +1,5 @@
 "use strict";
-
+let likesList = [];
 let collectionNumber = 0;
 showCollection(collectionNumber);
 
@@ -104,7 +104,7 @@ function renderPaintings() {
     }
 }
 
-let likesList = [];
+
 
 // function settingpaints(){
 //     let data = JSON.stringify(likesList);
@@ -118,13 +118,13 @@ function gettingLikes() {
         likesList = normalLikes;
         return normalLikes;
     }
-  
 }
 
 // settingpaints();
 let divEl = document.getElementById('sidebar');
 
 function getLikes(like) {
+    
     likesList.push(like);
     console.log(likesList);
     let data = JSON.stringify(likesList);
@@ -346,4 +346,4 @@ function getProducts(product,price){
     let data = JSON.stringify(productsList);
     localStorage.setItem('product',data);
 }
-
+}
