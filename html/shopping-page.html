@@ -9,6 +9,11 @@
 <link rel="stylesheet" href="/css/shoopingBag.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<style>
+          @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+</style>
 </head>
 <body>
     <header>
@@ -23,22 +28,14 @@
     </header>
     <main>
         <div id="headDiv">
-         <img src="https://via.placeholder.com/1000x400" alt="header">
-         <h1>Shopping Bag</h1>
+         <img src="/Images/output-onlinepngtools.png" alt="header">
+         <h1>SHOPPING BAG</h1>
         </div>
-    <section>
-        <div class="card">
-            <div class="copy">
-                <ul>
-                  <li>Click the "X" next to any item to remove it from your bag</li>
-                </ul>
-              </div>
-        </div>
-      </section>
+  
       <section class="deckcol-1">
         <div id="cart-container" class="card">
-          <h2>Your Bag</h2>
           <table id="cart">
+            <caption>Your Bag</caption>
             <thead>
               <tr>
                 <th>Remove</th>
@@ -58,18 +55,19 @@
     <form action="" id="Information">
         <fieldset>
         <legend>Please enter your Info for your purchase</legend>
-        <label for="Name">Name </label>
+        <label for="Name"><i class="far fa-user"></i> Your Name </label>
         <input type="text" id="Name" name="Name" placeholder="Name">
-        <label for="Email">Email</label>
-        <input type="email" id="Email" name="Email" placeholder="Email">
-        <label for="Phone">Phone number</label>
-        <input type="text" id="Phone" name="Phone" placeholder="Phone number">
+        <label for="Email"><i class="far fa-envelope"></i> Your Email </label>
+        <input type="email" id="Email" name="Email" placeholder="email@domain.com">
+        <label for="Phone"><i class="fas fa-phone"></i> Phone number</label>
+        <input type="text" id="Phone" name="Phone" placeholder="+962...">
         <p id="price">Total Price: </p> <span id="total"> </span>
         <p>Choose your payment method</p>
+        <label for="credit" class="credit"> Credit Card</label>
         <input type="radio" id="credit" name="payment" value="credit">
-        <label for="credit">Credit Card</label>
+      <label for="cash" class="credit">Cash</label>
         <input type="radio" id="cash" name="payment" value="cash">
-        <label for="cash">Cash</label>
+      </label>
         <input id="submitBtn" type="submit" value="Add your order" />
         </fieldset>
     </form>
@@ -81,6 +79,7 @@
       </p>
       <button type="button" id="okButton">OK</button>
   </div>
+  <img id="footerImg" src="/Images/output-onlinepngtools (1).png" alt="footer">
     </main>
     <footer>
       <p>&copy; Copyright to Team f6 and ASAC <i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i> <i class="fab fa-pinterest-p"></i></p>
