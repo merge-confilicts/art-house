@@ -48,13 +48,13 @@ main img{width: 250px;height: 250px;margin: 10px;transition: 0.8s;}
 #like1{
     width: 100px;
     height: 40px;
-    position: fixed;
+    /* position: fixed; */
     top: 600px;
     right:40px;
     border-radius: 10px;
     /* bottom: 30px; */
     /* margin-bottom: 50px; */
-    margin-right: -50px;
+    /* margin-right: -50px; */
     font-size:30px;
     color: black;
     padding: 5px 10px 5px 10px;
@@ -69,14 +69,11 @@ main img{width: 250px;height: 250px;margin: 10px;transition: 0.8s;}
 width: 0;
 height: 100%;
 background-color:black;
-/* transition: 0.5s; */
-/* overflow-x: hidden; */
 z-index: 1;
 position: fixed;
 top: 0;
 right:  0;
 display: inline-block;
-/* color: hotpink; */
 }
 #sidebar a{
     text-align: left;

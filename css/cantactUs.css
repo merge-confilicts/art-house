@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
 @prim: #53e3a6;
 
@@ -56,8 +57,6 @@ p{
 }
 
 
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
 
 
 header nav{
@@ -115,6 +114,54 @@ nav h1{
     font-size: 40px;
     color: #B69B77;
     
+
+ p {
+     text-align: center;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bold;
+     font-size: 20px;
+     float: left;
+     margin-left: 400px;
+ }
+
+ #teamm {
+     text-align: center;
+     margin-left: -200px;
+     padding-top: 20px;
+ }
+
+ #social {
+     float: right;
+     margin-right: 150px;
+ }
+
+ #social img {
+     width: 50%;
+     float: left;
+ }
+
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ 
+
+ header {
+     border: black;
+ }
+
+ 
+
+ 
+
+
+ nav h1 {
+     text-align: center;
+     font-size: 40px;
+     /*background-color: rgb(156, 167, 187);
+    height: 100%;*/
+
+
 }
 
 h2{
@@ -167,6 +214,7 @@ article section{
    margin-bottom: 100px;
    width: 40%;
    height:50% ;
+
    position: absolute;
      
 }
@@ -227,21 +275,52 @@ section span{
 }
 
 
-form .input{
-    position: relative;
-    width: 20em;
-    background-color: transparent;
-    border: none;
-    border-bottom: 0.25em solid ;
-    padding: 1em;
-    margin-bottom: 3em;
-    box-sizing: border-box;
-    outline: 0;
-    transition: 0.5s ;
-    opacity: 0.7;
-    border-radius: none;
-    background-color:#DDBF88 ;
+
+    /* margin-top: -300px;*/
+    position: absolute;
+    /* width: 150px;*/
+   /*height: 50%;*/
+   
 }
+
+section div h2{
+    padding-left:1%;
+}
+/*
+
+ 
+section div form fieldset p{
+    padding-left: 50px;
+}
+*/
+
+ 
+ /*
+#joinForm{
+   width: 80%;
+   height: 80%;
+   padding-left: 60%;
+}*/
+
+ /* input[type=text] { */
+
+ form .input {
+     width: 100%;
+     /* padding: 15px; */
+     /*margin: 5px, 0, 22px ,0;*/
+     /* padding-top: 20px;
+    padding-bottom: 15px; */
+     display: inline-block;
+     border: none;
+     background: #f1f1f1;
+     padding-top: 20px;
+     border-style: inset;
+ }
+
+ /* form fieldset input{
+    padding-top: 20px;
+    margin-top: 10px;
+
 
 form .input:hover{
     background-color: fade(white, 40%);
@@ -429,7 +508,6 @@ footer .fa-pinterest{
     top: -15px;
     position: relative;
 }
-
 
 
 
