@@ -1,5 +1,4 @@
 "use strict";
-
 // .............................................. Creating Constructors
 let paints = ["Bow by Clare Grill.jpg", "Composition X by Wassily Kandinsky.jpg", "cubism still life painting by Anis.jpg", "skyline city by Joun doe.jpg", "Still Life Tazza by jacob.jpg", "whatever by khalid.jpg"];
 let paitsPrices = ['15$', '20$', '7$', '75$', '30$', '175$'];
@@ -25,11 +24,9 @@ let postersArray = [];
 function Poster(posterName, price) { // ..........Posters Constructor
     this.posterName = posterName.split('by')[0];
     this.price = price;
-
     this.source = 'Images/Posters/' + posterName;
     postersArray.push(this);
 }
-
 // ............................................... Creating Objects
 function creatProducts() {
     for (let i = 0; i < paints.length; i++) {
@@ -43,7 +40,6 @@ function creatProducts() {
     }
 }
 creatProducts();
-
 // ............................................... Render Functions
 // ......Paintings Render
 let paintingsDiv = document.getElementById('paintingsContainer');
@@ -66,7 +62,6 @@ function renderPaintings() {
     }
 }
 renderPaintings();
-
 // ..................Decore Render
 function renderDecore() {
     let decoreDiv = document.getElementById('decoreContainer');
@@ -87,7 +82,6 @@ function renderDecore() {
     }
 }
 renderDecore();
-
 // ................. Posters Render
 function renderPosters() {
     let postersDiv = document.getElementById('PostersContainer');
@@ -108,7 +102,6 @@ function renderPosters() {
     }
 }
 renderPosters();
-
 // .................. Adding Products to Local storage
 let productsList = [];
 let prices = [];
@@ -119,38 +112,44 @@ function getProducts(product, price) {
     localStorage.setItem('product', data);
     let data2 = JSON.stringify(prices);
     localStorage.setItem('price', data2);
-
     let count = document.getElementById('numberOFitems');
     count.textContent = `(${productsList.length})`;
 }
-
 // .................. Adding Likes to List and Local storage
 let likesList = [];
 let typeslist = [];
 function getLikes(like, type) {
-    let flag = false;
-    for (let i = 0; i < likesList.length; i++) {
-        if (likesList[i] === like) {
-            flag = true;
-        }
-    }
-    if (flag !== true) {
+    let flag = true;
+    if (likesList == null) {
         likesList.push(like);
-        typeslist.push(type);
+        typeslist.pushu(type);
         localStorage.setItem('like', JSON.stringify(likesList));
         localStorage.setItem('type', JSON.stringify(typeslist));
         renderLikes();
     } else {
-        let message = document.getElementById('alertMessage');
-        message.style.width = '500px';
-        let closeMessageBtn = document.getElementById('closeMessage');
-        closeMessageBtn.addEventListener('click', closeSideMessage);
-        function closeSideMessage() {
-            message.style.width = '0px';
+        for (let i = 0; i < likesList.length; i++) {
+            if (likesList[i] === like) {
+                flag = false;
+            }
+        }
+        if (flag !== false) {
+            likesList.push(like);
+            typeslist.push(type);
+            localStorage.setItem('like', JSON.stringify(likesList));
+            localStorage.setItem('type', JSON.stringify(typeslist));
+            renderLikes();
+        }
+        else {
+            let message = document.getElementById('alertMessage');
+            message.style.width = '500px';
+            let closeMessageBtn = document.getElementById('closeMessage');
+            closeMessageBtn.addEventListener('click', closeSideMessage);
+            function closeSideMessage() {
+                message.style.width = '0px';
+            }
         }
     }
 }
-
 // .................. Render Likes to likes list
 let divEl = document.getElementById('sideBarItems');
 let div1EL;
@@ -168,18 +167,15 @@ function renderLikes() {
         thEl3.textContent = '';
         let hrElement = document.createElement('hr');
         divEl.appendChild(hrElement);
-
         for (let i = 0; i < likesList.length; i++) {
             div1EL = document.createElement('tr');
             divEl.appendChild(div1EL);
             let td = document.createElement('td');// the first td
             div1EL.appendChild(td);
             td.textContent = likesList[i];
-
             let td2 = document.createElement('td');// the second td
             div1EL.appendChild(td2);
             td2.textContent = typeslist[i];
-
             let td3 = document.createElement('td');// the third td
             div1EL.appendChild(td3);
             td3.innerHTML = '<i class="far fa-trash-alt"></i>';
@@ -193,20 +189,18 @@ function renderLikes() {
     }
 }
 renderLikes();
-
 // ........... remove from the list function
 function removeFromList(event) {
     let index = event.target.id;
+    divEl.innerHTML = '';
     for (let i = 0; i < likesList.length; i++) {
-        divEl.innerHTML = '';
         likesList.splice(index, 1);
         typeslist.splice(index, 1);
-        renderLikes();
-        localStorage.setItem('like', JSON.stringify(likesList));
-        localStorage.setItem('type', JSON.stringify(typeslist));
     }
+    renderLikes();
+    localStorage.setItem('like', JSON.stringify(likesList));
+    localStorage.setItem('type', JSON.stringify(typeslist));
 }
-
 //............ rendering Likes list when refresh
 function gettingLikes() {
     let normalLikes = JSON.parse(localStorage.getItem('like'));
@@ -218,7 +212,6 @@ function gettingLikes() {
     }
 }
 gettingLikes();
-
 // ................ Showing Category Collection
 let collectionNumber = 0;
 showCollection(collectionNumber);
@@ -232,7 +225,6 @@ function showCollection(index) {
     myCollections[index].style.display = "block";
     categories[index].style.backgroundColor = "gray";
 }
-
 // ........................ Likes Button and Likes List
 let btnlike = document.getElementById('like1');
 let btnclose = document.getElementById('close');
@@ -245,5 +237,4 @@ function opensidebar(event) {
 function closeSideBar() {
     document.getElementById("sidebar").style.width = "0px";
 }
-
-// ... End 
+// ... End
