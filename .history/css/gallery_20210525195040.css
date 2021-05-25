@@ -45,9 +45,15 @@ footer i{color: black;}
 #like1{
     width: 100px;
     height: 40px;
-    position: fixed;
+<<<<<<< HEAD
+    /* position: fixed; */
     top: 600px;
     right:40px;
+=======
+    position: fixed;
+    top: 500px;
+    right:80px;
+>>>>>>> 820b59e466245d15b63ec8d680a41905e02392b1
     border-radius: 10px;
     /* bottom: 30px; */
     /* margin-bottom: 50px; */

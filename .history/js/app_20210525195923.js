@@ -7,11 +7,11 @@ let xBtn = document.getElementById('xButton');
 btn.addEventListener('click', tourShow);
 xBtn.addEventListener('click', tourShow);
 function tourShow(event) {
-    let slideShow = document.getElementById('tour');
+    let slideShow = document.getElementById('TOUR');
     let displaySetting = slideShow.style.display;
     if (displaySetting == 'block') {
         slideShow.style.display = 'none';
-        btn.innerHTML = 'TOUR';
+        btn.innerHTML = 'tour';
     } else if (xBtn.addEventListener) {
         slideShow.style.display = 'block';
     }
