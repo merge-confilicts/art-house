@@ -85,7 +85,7 @@ h2{
 
 
 .right{
-    display: inline-block;
+    display: block;
     top:290px;
     left:550px;
     padding-bottom:20% ;
