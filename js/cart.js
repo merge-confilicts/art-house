@@ -17,13 +17,7 @@ function removeForm(event) {
 but.addEventListener('onclick', okMessage);
 okBtn.addEventListener('click', okMessage);
 function okMessage(event) {
-  // let slideShow = document.getElementById('alertMsg');
-  // let displaySetting = slideShow.style.display;
-  // if (displaySetting == 'block') {
-  //     slideShow.style.display = 'none';
-  // } else if (okBtn.addEventListener) {
-  //     slideShow.style.display = 'block';
-
+ 
   localStorage.removeItem("product");
   localStorage.removeItem("price");
   location.reload();
@@ -37,12 +31,18 @@ let tableRow;
 let cart;
 let cartProduct;
 let cartPrice;
+let sum = 0;
 function getLocalStorage() {
   cartProduct = JSON.parse(localStorage.getItem('product')) || [];
   console.log(cartProduct);
   cartPrice = JSON.parse(localStorage.getItem('price')) || [];
+  cartPrice = cartPrice.map(Number);
+  for (let i = 0; i < cartPrice.length; i++) {
+    sum += cartPrice[i]; }
+ 
   console.log(cartPrice);
 }
+
 
 function renderCart() {
   clearCart();
@@ -50,8 +50,6 @@ function renderCart() {
 }
 
 function clearCart() {
-
-
   while (tBody.firstElementChild) {
     tBody.removeChild(tBody.firstElementChild);
   }
@@ -66,7 +64,7 @@ function showCart() {
     deletetd.setAttribute('id', cartProduct[i]);
     let button = document.createElement('p');
     deletetd.appendChild(button);
-    button.textContent = 'X';
+    button.textContent= 'X';
     button.setAttribute('id', i);
     button.addEventListener('click', removeItemFromCart);
 
@@ -75,6 +73,10 @@ function showCart() {
 
     let Pricetd = document.createElement('td');
     Pricetd.textContent = cartPrice[i];
+    
+    let spantd = document.createElement('span'); 
+    spantd.textContent = '$'; 
+    Pricetd.appendChild(spantd); 
 
     tBody.appendChild(tableRow);
     tableRow.appendChild(deletetd);
@@ -93,6 +95,16 @@ function removeItemFromCart(event) {
       removeArray2.push(cartPrice[i]);
     }
   }
+  
+// function sumRow(){
+//     let tBody = table.getElementsByTagName('tbody')[0];
+//     tableRow = document.createElement('tr');
+//     tBody.appendChild(tableRow); 
+//     let tdEl = document.createElement('td'); 
+//     tableRow.appendChild(tdEl); 
+//     tdEl.textContent= sum; 
+//   }sumRow();
+
   cartProduct = removeArray;
   cartPrice = removeArray2;
   console.log(cartProduct);
@@ -110,4 +122,6 @@ function setToLocal() {
 }
 
 getLocalStorage();
+let spanTotal = document.getElementById('total'); 
+spanTotal.textContent= sum;
 renderCart();
