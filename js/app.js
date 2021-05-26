@@ -11,9 +11,11 @@ function tourShow(event) {
     let displaySetting = slideShow.style.display;
     if (displaySetting == 'block') {
         slideShow.style.display = 'none';
-        // btn.innerHTML = 'Tour';
+        // slideShow.style.transition = '.5s';
+        btn.innerHTML = 'TOUR';
     } else if (xBtn.addEventListener) {
         slideShow.style.display = 'block';
+        // slideShow.style.transition = '.5s';
     }
 }
 
@@ -35,5 +37,4 @@ function showSlide(n) {
 
     slides[index - 1].style.display = "block";
 }
-
 
