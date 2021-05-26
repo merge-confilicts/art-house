@@ -254,6 +254,10 @@ section span{
     margin-bottom: 100px;
     font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5D4037;
+    text-align: center;
 }
 #firstLine{
     display:inline-flex;

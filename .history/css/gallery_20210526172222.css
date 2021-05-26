@@ -135,7 +135,6 @@ h2{
     background-color: lightgray;
 }
 /* ...................... Images display */
-/*.............................paintingcontainer*/
 #paintingsContainer div{
     display: inline-block;
 }
@@ -147,80 +146,15 @@ h2{
 #paintingsContainer div span{
     display: inline-block;
     margin-bottom: 30px;
+    display: inline-block;
+    font-size: 25px;
     font-family: 'Oswald', sans-serif;
     color:  #101F14;
-    left: -200px;
-    position: relative;
-    padding-right: 20px;
-
-}
-#paintingsContainer div button{
-    display: inline-block;
-    background-color:  #101F14;
-    color:  #C5A86F;
-    border: 1px solid #C5A86F;
-    border-radius: 2px; 
-    left: -200px;
-    position: relative;
-}
-/*.......................decore countainer*/
-#decoreContainer div{
-    display: inline-block;
-}
-#decoreContainer div img{
-    width: 200px;
-    height: 300px;
-    margin-bottom: 50px;
-}
-#decoreContainer div span{
-    display: inline-block;
-    margin-bottom: 30px;
-    font-family: 'Oswald', sans-serif;
-    color:  #101F14;
-    left: -200px;
-    position: relative;
-    padding-right: 20px;
-
-
-}
-#decoreContainer div button{
-    display: inline-block;
-    background-color:  #101F14;
-    color:  #C5A86F;
-    border: 1px solid #C5A86F;
-    border-radius: 2px; 
-    border-radius: 2px; 
-    left: -200px;
-    position: relative;
-}
-/*.................................poster cointainer*/
-#PostersContainer div{
-    display: inline-block;
-}
-#PostersContainer div img{
-    width: 200px;
-    height: 300px;
-    margin-bottom: 50px;
-}
-#PostersContainer div span{
-    display: inline-block;
-    margin-bottom: 30px;
-    font-family: 'Oswald', sans-serif;
-    color:  #101F14;
-    left: -200px;
-    position: relative;
-    /* padding-right: 5px; */
-
-
-}
-#PostersContainer div button{
-    display: inline-block;
-    background-color:  #101F14;
-    color:  #C5A86F;
-    border: 1px solid #C5A86F;
-    border-radius: 2px; 
-    left: -200px;
-    position: relative;
+    top: 30px;
+    /* left: -50px; */
+    position: relative; 
+    padding-bottom: 10px; 
+    padding-left: 0px;
 }
 /* ................................................................ Footer */
 footer {

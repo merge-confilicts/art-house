@@ -207,9 +207,6 @@ h2{
     margin-bottom: 30px;
     font-family: 'Oswald', sans-serif;
     color:  #101F14;
-    left: -200px;
-    position: relative;
-    /* padding-right: 5px; */
 
 
 }
@@ -219,8 +216,6 @@ h2{
     color:  #C5A86F;
     border: 1px solid #C5A86F;
     border-radius: 2px; 
-    left: -200px;
-    position: relative;
 }
 /* ................................................................ Footer */
 footer {

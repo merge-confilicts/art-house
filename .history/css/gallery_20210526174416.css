@@ -138,6 +138,7 @@ h2{
 /*.............................paintingcontainer*/
 #paintingsContainer div{
     display: inline-block;
+    margin-left: 10px;
 }
 #paintingsContainer div img{
     width: 200px;
@@ -149,9 +150,8 @@ h2{
     margin-bottom: 30px;
     font-family: 'Oswald', sans-serif;
     color:  #101F14;
-    left: -200px;
+    left: -100px;
     position: relative;
-    padding-right: 20px;
 
 }
 #paintingsContainer div button{
@@ -160,8 +160,6 @@ h2{
     color:  #C5A86F;
     border: 1px solid #C5A86F;
     border-radius: 2px; 
-    left: -200px;
-    position: relative;
 }
 /*.......................decore countainer*/
 #decoreContainer div{
@@ -177,9 +175,6 @@ h2{
     margin-bottom: 30px;
     font-family: 'Oswald', sans-serif;
     color:  #101F14;
-    left: -200px;
-    position: relative;
-    padding-right: 20px;
 
 
 }
@@ -189,9 +184,6 @@ h2{
     color:  #C5A86F;
     border: 1px solid #C5A86F;
     border-radius: 2px; 
-    border-radius: 2px; 
-    left: -200px;
-    position: relative;
 }
 /*.................................poster cointainer*/
 #PostersContainer div{
@@ -207,9 +199,6 @@ h2{
     margin-bottom: 30px;
     font-family: 'Oswald', sans-serif;
     color:  #101F14;
-    left: -200px;
-    position: relative;
-    /* padding-right: 5px; */
 
 
 }
@@ -219,8 +208,6 @@ h2{
     color:  #C5A86F;
     border: 1px solid #C5A86F;
     border-radius: 2px; 
-    left: -200px;
-    position: relative;
 }
 /* ................................................................ Footer */
 footer {
