@@ -101,12 +101,12 @@ ul li {
     display: inline-block;
     margin-left: 0px;
     padding-top: 25px;
-    left: 850px;
+    left: 710px;
     position: relative;
     margin-right: 60px;
 }
 ul li:first-child{
-    margin-left: 50px;
+    margin-left: 55px;
     padding-left: 0px;
     left: 0px;
     font-size: 25px;

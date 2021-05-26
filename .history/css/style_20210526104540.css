@@ -11,77 +11,48 @@ body{
 #tour{
     margin-top: 180px;
     margin-left: 200px;
-    width: 60%;
+    width: 70%;
     background-color: #e8e3b1;
     position: absolute;
     height: 400px;
     z-index: 1;
     display: none;
-    border: 5px solid #062a26;
     transition: 1s;
+    border: 5px solid #062a26;
 }
 #tour img{
-    width: 700px;
+    width: 800px;
     height: 410px;
     margin-left: 0px;
     padding-bottom: 20px;
-    opacity: .8;
-}
-#tour .back{
-    top: -80px;
-    position: relative;
-    display: block;
-    width: 700px;
-    background-color: #e8e3b1;
-    height: 22px;
-    opacity: .5;
-
 }
 #tour p {
-    /* padding-bottom: 30px; */
-    top: -60px;
-    position: relative;
-    margin-left: 170px;
-    color: #062a26;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
+    padding-bottom: 30px;
+    margin-left: 110px;
+    font-family: cursive;
     font-size: 20px;
-    z-index: 1;
 }
 #tour button{
     top: -25px;
-    right: 10px;
+    right: 20px;
     position: absolute;
     width: 30px;
-    height: 35px;
+    height: 30px;
     font-size: 25px;
-    text-align: center;
-    transition: 1s;
-}
-#tour #tourBorder{
-    display: block;
-    border: solid 5px #c5a86f;
-    width: 300px;
-    height: 600px;
-    top: -500px;
-    left:600px;
-    position: relative;
-    z-index: -4;
-    
 }
 .mySlide{
     display: none;
 }
 .slideCounter{
     top: 20px;
-    right: 60px;
+    right: 90px;
     position: absolute;
     font-size: 20px;
     font-family:cursive;
     color: #062a26;
     font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
 }
 .prev{
     top: 180px;
@@ -92,7 +63,7 @@ body{
 }
 .next{
     top: 180px;
-    left: 760px;
+    left: 860px;
     position: absolute;
     font-size: 30px;
     color: #062a26;
@@ -101,7 +72,7 @@ ul li {
     display: inline-block;
     margin-left: 0px;
     padding-top: 25px;
-    left: 850px;
+    left: 710px;
     position: relative;
     margin-right: 60px;
 }
@@ -118,14 +89,6 @@ nav ul li a {
     text-decoration: none;
     color: #062a26;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-#logo{
-    top: -30px;
-    left: 100px;
-    position: absolute;
-    width: 100px;
-    height:100px;
-    z-index: 2;
 }
 header span{
     display: block;
@@ -392,7 +355,7 @@ main section:last-of-type article:first-of-type {
 main section:last-of-type article:first-of-type div {
     display: block;
     border: solid 5px #c5a86f;
-    width: 300px;
+    width: 250px;
     height: 600px;
     top: -140px;
     left:500px;

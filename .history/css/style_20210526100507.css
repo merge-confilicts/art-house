@@ -9,99 +9,67 @@ body{
 
 
 #tour{
-    margin-top: 180px;
     margin-left: 200px;
-    width: 60%;
-    background-color: #e8e3b1;
+    width: 70%;
+    background-color: darkgray;
     position: absolute;
-    height: 400px;
+    height: 550px;
     z-index: 1;
     display: none;
-    border: 5px solid #062a26;
     transition: 1s;
+}
+#tour h4{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-family: cursive;
 }
 #tour img{
     width: 700px;
-    height: 410px;
-    margin-left: 0px;
+    margin-left: 110px;
     padding-bottom: 20px;
-    opacity: .8;
-}
-#tour .back{
-    top: -80px;
-    position: relative;
-    display: block;
-    width: 700px;
-    background-color: #e8e3b1;
-    height: 22px;
-    opacity: .5;
-
 }
 #tour p {
-    /* padding-bottom: 30px; */
-    top: -60px;
-    position: relative;
-    margin-left: 170px;
-    color: #062a26;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
+    padding-bottom: 30px;
+    margin-left: 110px;
+    font-family: cursive;
     font-size: 20px;
-    z-index: 1;
 }
 #tour button{
     top: -25px;
-    right: 10px;
+    right: 60px;
     position: absolute;
     width: 30px;
-    height: 35px;
+    height: 30px;
     font-size: 25px;
-    text-align: center;
-    transition: 1s;
-}
-#tour #tourBorder{
-    display: block;
-    border: solid 5px #c5a86f;
-    width: 300px;
-    height: 600px;
-    top: -500px;
-    left:600px;
-    position: relative;
-    z-index: -4;
-    
 }
 .mySlide{
     display: none;
 }
 .slideCounter{
-    top: 20px;
-    right: 60px;
+    left: 20px;
     position: absolute;
     font-size: 20px;
     font-family:cursive;
-    color: #062a26;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 20px;
 }
 .prev{
-    top: 180px;
-    left: 10px;
+    top: 250px;
+    left: 50px;
     position: absolute;
     font-size: 30px;
-    color: #062a26;
 }
 .next{
-    top: 180px;
-    left: 760px;
+    top: 250px;
+    left: 860px;
     position: absolute;
     font-size: 30px;
-    color: #062a26;
 }
 ul li {
     display: inline-block;
     margin-left: 0px;
     padding-top: 25px;
-    left: 850px;
+    left: 710px;
     position: relative;
     margin-right: 60px;
 }
@@ -118,14 +86,6 @@ nav ul li a {
     text-decoration: none;
     color: #062a26;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-#logo{
-    top: -30px;
-    left: 100px;
-    position: absolute;
-    width: 100px;
-    height:100px;
-    z-index: 2;
 }
 header span{
     display: block;
@@ -152,12 +112,10 @@ h1{
     font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
     color: #e8e3b1;
-    margin-bottom: 100px;
 }
 header p {
-    top: 400px;
-    left:100px;
-    position: absolute;
+    left: -100px;
+    position: relative;
     font-size: 50px;
     font-family: 'Noto Sans JP', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
@@ -182,8 +140,8 @@ header p {
 }
 
 main section:first-child img{
-    margin-top: 160px;
-    margin-left: 700px;
+    margin-top: 180px;
+    margin-left: 600px;
     width: 100px;
     height: 100px;
     border: none;
@@ -249,7 +207,7 @@ main section:nth-child(2){
     background-color: #062a26;
     width: 1100px;
     height: 600px;
-    margin-left: 104px;
+    margin-left: 70px;
     margin-top: 30px;
     border: 8px solid #dfc086;
     
@@ -392,7 +350,7 @@ main section:last-of-type article:first-of-type {
 main section:last-of-type article:first-of-type div {
     display: block;
     border: solid 5px #c5a86f;
-    width: 300px;
+    width: 250px;
     height: 600px;
     top: -140px;
     left:500px;
@@ -466,25 +424,24 @@ main img {
 
 footer {
     text-align: center;
-    top: 450px;
-    position: relative;
-    background-color:#062a26 ;
+    
+    
 }
 footer p{
     margin-right: 200px;
-    color: #a38b5d;
+    color: #062a26;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
-    top: 10px;
+    top: -780px;
     position: relative;
 }
 #right{
     border: none;
     width: 400px;
     height: 580px;
-    left: -110px;
-    top: 1920px;
-    position: absolute;
+    right: 100px;
+    top: -730px;
+    position: relative;
     
 
 }
@@ -492,9 +449,9 @@ footer p{
     border: none;
     width: 300px;
     height: 1000px;
-    right:0px;
-    top: 1500px;
-    position: absolute;
+    left: 520px;
+    top: -700px;
+    position: relative;
 }
 footer .fa-copyright{
     color: #062a26;
@@ -503,34 +460,34 @@ footer .fa-copyright{
 }
 footer span{
 
-    background-color: #a38b5d;
-    border: 2px solid #a38b5d;
+    background-color: #062a26;
+    border: 2px solid #062a26;
     left: 80px;
-    top:-5px;
+    top:-400px;
     position: relative;
 }
 footer .fa-facebook{
     margin-left: 200px;
-    top: -10px;
+    top: -800px;
     position: relative;
-    color: #a38b5d;
+    color: #062a26;
     font-size: 20px;
 }
 footer .fa-instagram{
-    top: -10px;
+    top: -800px;
     position: relative;
-    color: #a38b5d;
+    color: #062a26;
     font-size: 20px;
 }
 footer .fa-twitter{
-    top: -10px;
+    top: -800px;
     position: relative;
-    color: #a38b5d;
+    color: #062a26;
     font-size: 20px;
 }
 footer .fa-pinterest{
-    top: -10px;
+    top: -800px;
     position: relative;
-    color: #a38b5d;
+    color: #062a26;
     font-size: 20px;
 }

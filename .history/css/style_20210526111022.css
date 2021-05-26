@@ -17,7 +17,7 @@ body{
     height: 400px;
     z-index: 1;
     display: none;
-    border: 5px solid #062a26;
+    border: 5px solid #c5a86f;
     transition: 1s;
 }
 #tour img{
@@ -101,7 +101,7 @@ ul li {
     display: inline-block;
     margin-left: 0px;
     padding-top: 25px;
-    left: 850px;
+    left: 710px;
     position: relative;
     margin-right: 60px;
 }
@@ -118,14 +118,6 @@ nav ul li a {
     text-decoration: none;
     color: #062a26;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-#logo{
-    top: -30px;
-    left: 100px;
-    position: absolute;
-    width: 100px;
-    height:100px;
-    z-index: 2;
 }
 header span{
     display: block;

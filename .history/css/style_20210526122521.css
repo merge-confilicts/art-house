@@ -101,7 +101,7 @@ ul li {
     display: inline-block;
     margin-left: 0px;
     padding-top: 25px;
-    left: 850px;
+    left: 710px;
     position: relative;
     margin-right: 60px;
 }
@@ -124,12 +124,12 @@ nav ul li a {
     left: 100px;
     position: absolute;
     width: 100px;
-    height:100px;
+    height:120px;
     z-index: 2;
 }
 header span{
     display: block;
-    top: 15px;
+    top: 10px;
     left: 30px;
     position: relative;
     background-color: #062a26;

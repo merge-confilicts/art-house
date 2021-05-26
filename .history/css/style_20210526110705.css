@@ -17,8 +17,8 @@ body{
     height: 400px;
     z-index: 1;
     display: none;
-    border: 5px solid #062a26;
     transition: 1s;
+    border: 5px solid #062a26;
 }
 #tour img{
     width: 700px;
@@ -56,18 +56,17 @@ body{
     height: 35px;
     font-size: 25px;
     text-align: center;
-    transition: 1s;
 }
 #tour #tourBorder{
     display: block;
     border: solid 5px #c5a86f;
     width: 300px;
-    height: 600px;
+    height: 500px;
     top: -500px;
     left:600px;
     position: relative;
     z-index: -4;
-    
+    opacity: .;
 }
 .mySlide{
     display: none;
@@ -101,7 +100,7 @@ ul li {
     display: inline-block;
     margin-left: 0px;
     padding-top: 25px;
-    left: 850px;
+    left: 710px;
     position: relative;
     margin-right: 60px;
 }
@@ -118,14 +117,6 @@ nav ul li a {
     text-decoration: none;
     color: #062a26;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-#logo{
-    top: -30px;
-    left: 100px;
-    position: absolute;
-    width: 100px;
-    height:100px;
-    z-index: 2;
 }
 header span{
     display: block;
