@@ -410,7 +410,7 @@ footer span{
     background-color: #C5A86F;
     border: 2px solid #C5A86F;
     left: 30px;
-    top:-10px;
+    top:-18px;
     position: relative;
 }
 footer .fa-facebook{
@@ -424,21 +424,18 @@ footer .fa-facebook{
 footer .fa-instagram{
     color: #C5A86F;
     font-size: 20px;
-    left: 90px;
     top: -20px;
     position: relative;
 }
 footer .fa-twitter{
     color: #C5A86F;
     font-size: 20px;
-    left: 90px;
     top: -20px;
     position: relative;
 }
 footer .fa-pinterest{
     color: #C5A86F;
     font-size: 20px;
-    left: 90px;
     top: -20px;
     position: relative;
 }
