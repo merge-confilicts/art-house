@@ -220,10 +220,10 @@ function showCollection(index) {
     let categories = document.getElementsByClassName("categoryBtn");
     for (let i = 0; i < myCollections.length; i++) {
         myCollections[i].style.display = "none";
-        categories[i].style.backgroundColor = "white";
+        categories[i].style.backgroundColor = "#F4EBD0";
     }
     myCollections[index].style.display = "block";
-    categories[index].style.backgroundColor = "gray";
+    categories[index].style.backgroundColor = "#B69B77";
 }
 // ........................ Likes Button and Likes List
 let btnlike = document.getElementById('like1');

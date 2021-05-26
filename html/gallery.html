@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="../css/gallery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Indie+Flower&display=swap');
+            </style>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Indie+Flower&family=Oswald:wght@500&display=swap');
+                </style>
     <title>Art House</title>
 </head>
 
@@ -24,7 +31,7 @@
     <head>
         <nav>
             <ul>
-                <li><a href="/index.html">Art House</a></li>
+                <li><a href="/index.html"><img src="../Images/logo gold.png"></a></li>
                 <li><a href="#">Gallary</a></li>
                 <li><a href="contact-us.html">Contact</a></li>
                 <li><a href="shopping-page.html"><i class="fas fa-shopping-cart"></i><span
@@ -32,17 +39,27 @@
             </ul>
         </nav>
         <div id="frontDiv">
-            <img src="https://via.placeholder.com/1000x400" alt="" id="firstPage">
+            <img src="../Images/1 (1).jpg" alt="" id="firstPage">
             <h1>GALLERY</h1>
         </div>
     </head>
     <main>
         <button id="like1"><i class="fas fa-heart"></i></button>
+        <h2>CATEGORIES</h2>
+
+        <section>
+            <span></span>
+            <span id='lineright'></span>
+        </section>
+
         <div id="categories">
             <span onclick="showCollection(0)" class="categoryBtn">PAINTINGS</span>
             <span onclick="showCollection(1)" class="categoryBtn">DECORE</span>
             <span onclick="showCollection(2)" class="categoryBtn">POSTER</span>
         </div>
+
+         
+
         <!-- ........................................................Paintings -->
         <div id="paintings" class="myCollections">
             <div id="paintingsContainer"></div>
@@ -56,14 +73,16 @@
             <div id="PostersContainer"></div>
             <div id="decoreContainer"></div>
         </div>
+        
     </main>
+
     <footer>
-        <i class="far fa-copyright"></i>
-        <span>Copy Right</span>
-        <a href="" class="footerIcons"><i class="fab fa-facebook-f" id="firstFooterIcon"></i></a>
-        <a href="" class="footerIcons"><i class="fab fa-twitter"></i></a>
-        <a href="" class="footerIcons"><i class="fab fa-google-plus-g"></i></a>
-        <a href="" class="footerIcons"><i class="fab fa-instagram"></i></a>
+        <p><i class="far fa-copyright"></i> Art-House 2021</p>
+        <span></span>
+        <a href="#"> <i class="fab fa-facebook"></i></a>
+        <a href="#"> <i class="fab fa-instagram"></i></i></a>
+        <a href="#"> <i class="fab fa-twitter"></i></i></a>
+        <a href="#"><i class="fab fa-pinterest"></i></i></a>
     </footer>
 
 
