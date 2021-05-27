@@ -126,13 +126,13 @@ ul li a{
     background-color: lightgray;
 }
 /* ...................... Images display */
+button{cursor: pointer;margin-left: 5px;}
 /*.............................paintingcontainer*/
 #paintingsContainer div{
     display: inline-block;
-    margin-left: 50px;
-    width: 300px;
+    width: 280px;
     height: 370px;
-
+    margin-left: 85px;
 }
 #paintingsContainer div img{
     width: 280px;
@@ -152,7 +152,7 @@ ul li a{
 /*.......................decore countainer*/
 #decoreContainer div{
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 85px;
     width: 300px;
     height: 370px;
 }
@@ -175,7 +175,7 @@ ul li a{
 /*.................................poster cointainer*/
 #PostersContainer div{
     display: inline-block;
-    margin-left: 50px;
+    margin-left: 85px;
     width: 300px;
     height: 370px;
 }
@@ -258,8 +258,8 @@ footer .fa-pinterest{
     width: 50px;
     height: 50px; 
     position: fixed;
-    bottom: 50px;
-    right:50px;
+    bottom: 30px;
+    right:30px;
     border-radius: 100px;
     font-size:30px;
     border: none;
